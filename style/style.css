@@ -1,0 +1,572 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header #fundo-rosa{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: #B5866C;
+    width: 100%;
+    height: 580px;
+    z-index: -4;
+    opacity: 0.36;
+    filter: blur(px);
+}
+
+nav{
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: 55px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    /*background-color: #ECE7DF;*/
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    bottom: 100%;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+}
+
+nav.sticky-nav{
+    /*background-color: rgba(255, 255, 255, 0.95);*/
+    background-color: rgba(255, 255, 255, 0.775);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+nav img{
+    width: 50px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav ul li a{
+    color: rgba(0, 0, 0, 0.587);
+    transition: color 0.3s ease;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a p{
+    background-color: #B5866C;
+    padding: 9.5px;
+    border-radius: 28px;
+    transition: background-color 0.2s ease;
+    font-family: "roboto", sans-serif;
+}
+
+nav a p:hover{
+    background-color: #c79379;
+}
+
+header #hero{
+    width: 70vw;
+    height: 525px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*border: 1px solid green;*/
+}
+
+header #textos{
+    display: flex;
+    flex-direction: column;
+}
+
+header #textos #cro{
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 29px;
+    width: fit-content;
+    padding: 6.5px;
+    color: rgba(0, 0, 0, 0.587);
+    font-size: 0.8em;
+    font-family: "roboto", sans-serif;
+    transition: color 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+header #textos #cro:hover{
+    color: black;
+}
+
+header #hero #textos #cro img{
+    width: 18px;
+}
+
+header #hero #textos h1{
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header #hero #textos h1 span{
+    color: #B5866C;
+    font-style: italic;
+}
+
+header #hero #textos #descricao{
+    font-size: 1.3em;
+}
+
+header #hero #textos #botoes{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 18px;
+
+    /*background-color: rgb(194, 194, 194);*/
+    margin-top: 20px;
+}
+
+header #hero #textos #botoes #agendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    background-color: #B5866C;
+    padding: 8px 11px;
+    border-radius: 28px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+header #hero #textos #botoes #agendar img{
+    width: 18px;
+}
+
+header #hero #textos #botoes #agendar:hover{
+    background-color: #c79379;
+}
+
+header #hero #textos #botoes #procedimentos{
+    background-color: #fff;
+    padding: 10px 9px;
+    border-radius: 28px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+header #hero #textos #botoes #procedimentos:hover{
+    background-color: #ffffffa1;
+}
+
+header #hero #textos #avaliacoes{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+    /*border: 1px solid black;*/
+}
+
+header #hero #textos #avaliacoes div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #hero #textos #avaliacoes div img{
+    width: 22px;
+}
+
+header #hero #fotos-local{
+    /*border: 1px solid black;*/
+    position: relative;
+
+    display: flex;
+    justify-content: end;
+}
+
+header #hero #fotos-local::before{
+    content: "";
+    position: absolute;
+
+    width: 90%;
+    height: 99%;
+
+    background: radial-gradient(
+    circle,
+    rgba(181, 134, 108, 0.55) 70%,
+    rgba(181, 134, 108, 0.22) 35%,
+    rgba(181, 134, 108, 0.08) 55%,
+    transparent 75%
+    );
+
+    filter: blur(45px);
+
+    z-index: 0;
+
+    top: 56%;
+    left: 50%;
+
+    transform: translate(-35%, -50%);
+}
+
+header #hero #fotos-local img{
+    position: relative;
+    z-index: 2;
+    height: 500px;
+    top: 12.1px;
+    transform: scaleX(-1);
+    /*border: 1px solid black;*/
+}
+
+main{
+    /*padding: 80px 0;*/
+}
+
+#procedimentos-sec{
+    width: 70vw;
+    margin: auto;
+    padding: 80px 0;
+    /*border: 1px solid black;*/
+}
+
+#procedimentos-sec #proced-p{
+    font-family: "roboto", sans-serif;
+    color: #B5866C;
+    font-weight: 500;
+}
+
+#procedimentos-sec h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+#procedimentos-sec #proced-descri{
+    font-size: 1.2em;
+    margin-bottom: 55px;
+}
+
+#procedimentos-sec #container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    /*border: 1px solid blue;*/
+}
+
+#procedimentos-sec #container .proced{
+    border: 1px solid rgba(0, 0, 0, 0.300);
+    padding: 20px;
+    width: 270px;
+    height: 160px;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+#procedimentos-sec #container .proced:hover{
+    border: 1px solid black;
+    transform: translate(-3px, -3px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 26px 56px -8px, rgba(0, 0, 0, 0.3) 0px 14px 32px -14px;
+}
+
+#procedimentos-sec #container .proced:hover .material-symbols-outlined{
+    background-color: #B5866C;
+    color: white;
+}
+
+#procedimentos-sec #container .proced .material-symbols-outlined {
+    background-color: hsla(21, 33%, 57%, 0.230);
+    padding: 5px;
+    border-radius: 50%;
+    color: #B5866C;
+    transition: .0.3s ease;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+#procedimentos-sec #container .proced .texto-e-desc{
+    margin-top: 4px;
+}
+
+#procedimentos-sec #container .proced .texto-e-desc h1{
+    font-size: 1.6em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+#axd{
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 80px;
+}
+
+#axd-container{
+    /*border: 1px solid blue;*/
+    width: 70vw;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#axd-container #texto{
+    /*border: 1px solid green;*/
+}
+
+#axd-container #texto p{
+    color: #B5866C;
+    font-family: "roboto", sans-serif;
+    font-weight: 500;
+}
+
+#axd-container #texto #desc-axd{
+    color: black;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 13px;
+}
+
+#axd-container #texto h1{
+    font-size: 3.6em;
+    margin: 10px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#axd-container #texto #agendar-axd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    background-color: #B5866C;
+    padding: 8px 11px;
+    border-radius: 28px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+}
+
+#axd-container #texto #agendar-axd img{
+    width: 18px;
+}
+
+#axd-container #texto #agendar-axd:hover{
+    background-color: #c79379;
+}
+
+
+#axd-container #texto #agendar-axd p{
+    color: white;
+}
+
+
+#axd #axd-container #axd-elemen{
+    /*border: 1px solid green;*/
+    position: relative;
+    width: 420px;
+    min-height: 520px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#axd #axd-container #axd-elemen img{
+    width: 380px;
+    display: none;
+    opacity: 0;
+    border-radius: 15px;
+}
+
+#axd #axd-container #axd-elemen .img0{
+    display: block;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#axd #axd-container #axd-elemen #buttons{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+#axd #axd-container #axd-elemen #buttons button{
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: hsla(21, 60%, 45%, 0.23);
+    color: #B5866C;
+    transition: 0.3s ease;
+}
+
+#axd #axd-container #axd-elemen #buttons button:hover{
+    cursor: pointer;
+    background-color: #B5866C;
+    color: white;
+}
+
+#espaco{
+    width: 70vw;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+#espaco #texto-espaco{
+    /* border: 1px solid black; */
+}
+
+#espaco #texto-espaco #comeco{
+    color: #B5866C;
+    font-family: "roboto", sans-serif;
+    font-weight: 500;
+}
+
+#espaco #texto-espaco h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+#espaco #texto-espaco #desc-espaco{
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+#espaco #texto-espaco hr{
+    margin: 19px 0;
+    width: 40px;
+    border: 1.5px solid #B5866C;
+    border-radius: 28px;
+}
+
+#espaco #texto-espaco #agendar-espaco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    background-color: #B5866C;
+    padding: 8px 11px;
+    border-radius: 28px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+}
+
+#espaco #texto-espaco #agendar-espaco:hover{
+    background-color: #c79379;
+}
+
+
+#espaco #texto-espaco #agendar-espaco img{
+    width: 18px;
+}
+
+#espaco #texto-espaco #agendar-espaco p{
+    color: white;
+}
+
+#espaco video{
+    width: 260px;
+    border-radius: 15px;
+}
+
+#espaco #infos-espaco{
+    width: 260px;
+    min-height: 293px;
+    /* border: 1px solid black; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+}
+
+#espaco #infos-espaco .info{
+    /* border: 1px solid blue; */
+    width: 92%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+#espaco #infos-espaco .info span{
+    background-color: #B5866C;
+    padding: 9px;
+    border-radius: 50%;
+    color: white;
+    transition: .0.3s ease;
+    margin-left: 3px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+#espaco #infos-espaco .info p{
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+}
