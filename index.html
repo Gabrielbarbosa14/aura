@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+  '2w'
   <head>
     <link
       rel="stylesheet"
@@ -28,20 +29,22 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <nav>
-      <img src="recursos/logo-aura-odonto.png" alt="Logo Aura odonto" />
+    <nav id="nav">
+      <a href="#fundo-rosa">
+        <img src="recursos/logo-aura-odonto.png" alt="Logo Aura odonto" />
+      </a>
       <ul>
-        <li><a href="#">Procedimentos</a></li>
-        <li><a href="#">Resultados</a></li>
-        <li><a href="#">Equipe</a></li>
-        <li><a href="#">Depoimentos</a></li>
+        <li><a href="#procedimentos-sec">Procedimentos</a></li>
+        <li><a href="#axd">Resultados</a></li>
+        <li><a href="#anterior">Espaço</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
       <a href="">
         <p>Agendar Consulta</p>
       </a>
     </nav>
-    <header>
+    <header id="header">
       <div id="fundo-rosa"></div>
       <div id="hero">
         <div id="textos">
@@ -91,7 +94,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <section id="procedimentos-sec">
         <p id="proced-p">PROCEDIMENTOS</p>
         <h1>
@@ -163,7 +166,7 @@
       <section id="axd">
         <div id="axd-container">
           <div id="texto" class="elemen">
-            <p>ANTES E DEPOIS</p>
+            <p>RESULTADOS</p>
             <h1>
               Transformações <br />
               reais dos nossos <br />
@@ -518,6 +521,6 @@
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
