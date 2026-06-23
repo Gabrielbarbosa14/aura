@@ -34,22 +34,19 @@
       </a>
       <ul>
         <li><a href="#procedimentos-sec">Procedimentos</a></li>
-        <li><a href="#axd">Resultados</a></li>
+        <li><a href="#resultados">Resultados</a></li>
         <li><a href="#anterior">Espaço</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
-      <a href="">
-        <p>Agendar Consulta</p>
-      </a>
+      <a href="" class="bt-agendar-consulta-nav"> Agendar Consulta </a>
     </nav>
     <header id="header">
       <div id="fundo-rosa"></div>
       <div id="hero">
         <div id="textos">
           <p id="cro">
-            <img src="recursos/confere-cro.png" alt="" /> Clinica premium - CRO
-            12.345
+            <span class="material-symbols-outlined"> check_circle </span>Clinica premium - CRO 12.345
           </p>
           <h1>
             O sorriso que você <br />
@@ -68,12 +65,12 @@
             humanizado.
           </p>
           <div id="botoes">
-            <a href="#" id="agendar">
-              <p>Agendar Consulta</p>
-              <img src="recursos/seta-para-esquerda.png" alt="" />
+            <a href="#" id="bt-agendar-consulta">
+              Agendar Consulta
+              <span class="material-symbols-outlined"> calendar_month </span>
             </a>
             <a href="#" id="procedimentos">
-              <p>Nossos Procedimentos</p>
+              Nossos Procedimentos
             </a>
           </div>
           <div id="avaliacoes">
@@ -95,16 +92,18 @@
     </header>
     <main id="main">
       <section id="procedimentos-sec">
-        <p id="proced-p">PROCEDIMENTOS</p>
-        <h1>
-          Tratamentos pensados para <br />
-          o seu sorriso
-        </h1>
-        <p id="proced-descri">
-          Combinamos estética, função e conforto em cada procedimento, usando o
-          que há de mais <br />
-          avançado em odontologia.
-        </p>
+        <div class="titulo-sub-descricao">
+          <p class="titulo">PROCEDIMENTOS</p>
+          <h1>
+            Tratamentos pensados para <br />
+            o seu sorriso
+          </h1>
+          <p class="descricao">
+            Combinamos estética, função e conforto em cada procedimento, usando
+            o que há de mais <br />
+            avançado em odontologia.
+          </p>
+        </div>
         <div id="container">
           <div class="proced">
             <span class="material-symbols-outlined"> Wand_Stars </span>
@@ -162,26 +161,28 @@
           </div>
         </div>
       </section>
-      <section id="axd">
-        <div id="axd-container">
-          <div id="texto" class="elemen">
-            <p>RESULTADOS</p>
-            <h1>
-              Transformações <br />
-              reais dos nossos <br />
-              pacientes.
-            </h1>
-            <p id="desc-axd">
-              Descubra como um novo sorisso pode renovar sua <br />
-              confiança. Oferecemos soluções personalizadas e <br />
-              tecnologia de ponta.
-            </p>
-            <a href="#" id="agendar-axd">
-              <p>Agendar Consulta</p>
-              <img src="recursos/seta-para-esquerda.png" alt="" />
+      <section id="resultados">
+        <div id="container-resultados">
+          <div id="lado-esquerdo">
+            <div class="titulo-sub-descricao">
+              <p class="titulo">RESULTADOS</p>
+              <h1>
+                Transformações <br />
+                reais dos nossos <br />
+                pacientes.
+              </h1>
+              <p class="descricao descricao-resultados  ">
+                Descubra como um novo sorisso pode renovar sua <br />
+                confiança. Oferecemos soluções personalizadas e <br />
+                tecnologia de ponta.
+              </p>
+            </div>
+            <a href="#" id="bt-agendar-consulta">
+              Agendar Consulta
+              <span class="material-symbols-outlined"> calendar_month </span>
             </a>
           </div>
-          <div id="axd-elemen" class="elemen">
+          <div id="resultados-elemen" class="elemen">
             <img src="recursos/img1.jpg" alt="" class="axd-img img0" />
             <img src="recursos/img2.jpg" alt="" class="axd-img" />
             <img src="recursos/img3.jpg" alt="" class="axd-img" />
@@ -201,7 +202,7 @@
       </section>
       <section id="espaco">
         <div id="texto-espaco">
-          <p id="comeco">NOSSO ESPAÇO</p>
+          <!-- <p id="comeco">NOSSO ESPAÇO</p>
           <h1>
             Um espaço <br />
             feito para o <br />
@@ -211,11 +212,28 @@
             Tecnologia, conforto e acolhimento <br />
             para que você tenha a melhor <br />
             experiência possível.
-          </p>
+          </p> -->
+          <div class="titulo-sub-descricao">
+            <p class="titulo">NOSSO ESPAÇO</p>
+            <h1>
+              Um espaço <br />
+              feito para o <br />
+              seu bem-estar
+            </h1>
+            <p class="descricao">
+              Tecnologia, conforto e acolhimento <br />
+              para que você tenha a melhor <br />
+              experiência possível.
+            </p>
+          </div>
           <hr />
-          <a href="#" id="agendar-espaco">
+          <!-- <a href="#" id="agendar-espaco">
             <p>Agendar Consulta</p>
             <img src="recursos/seta-para-esquerda.png" alt="" />
+          </a> -->
+          <a href="#" id="bt-agendar-consulta">
+              Agendar Consulta
+              <span class="material-symbols-outlined"> calendar_month </span>
           </a>
         </div>
         <video src="recursos/video-clinica.mp4" controls></video>
@@ -235,8 +253,12 @@
         </div>
       </section>
       <section id="depoimentos">
-        <p id="nosso-espaco">DEPOIMENTOS</p>
-        <h1>Quem confia em nós,<br />fica conosco</h1>
+        <!-- <p id="nosso-espaco">DEPOIMENTOS</p>
+        <h1>Quem confia em nós,<br />fica conosco</h1> -->
+        <div class="titulo-sub-descricao">
+          <p class="titulo">DEPOIMENTOS</p>
+          <h1>Quem confia em nós,<br />fica conosco</h1>
+        </div>
         <div class="container swiper">
           <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">
@@ -524,67 +546,69 @@
         </div>
         <div id="div-faq">
           <div id="pergunta1" class="perguntas ativa">
-            <div id="pergunta-mais">
-              <h1>Como que coisa o coiso meu fih?</h1>
+            <div class="pergunta-mais">
+              <h1>Vocês atendem por convênio?</h1>
               <span class="material-symbols-outlined"> add_2 </span>
             </div>
             <div class="div-resposta">
               <p>
-                Assim, tem que pegar o coiso, coisa o coiso na parede e joga o
-                coiso na caixa d'agua
+                Atendemos os principais convênios odontológicos e também
+                oferecemos planos particulares com parcelamento facilitado.
               </p>
             </div>
           </div>
           <div class="perguntas">
-            <div id="pergunta-mais">
-              <h1>Como que coisa o coiso meu fih?</h1>
+            <div class="pergunta-mais">
+              <h1>Quanto tempo dura um clareamento?</h1>
               <span class="material-symbols-outlined"> add_2 </span>
             </div>
             <div class="div-resposta">
               <p>
-                Assim, tem que pegar o coiso, coisa o coiso na parede e joga o
-                coiso na caixa d'agua
+                O resultado pode durar de 1 a 3 anos, dependendo dos hábitos.
+                Oferecemos manutenção semestral.
               </p>
             </div>
           </div>
           <div class="perguntas">
-            <div id="pergunta-mais">
-              <h1>Como que coisa o coiso meu fih?</h1>
+            <div class="pergunta-mais">
+              <h1>Lentes de contato dental machucam?</h1>
               <span class="material-symbols-outlined"> add_2 </span>
             </div>
             <div class="div-resposta">
               <p>
-                Assim, tem que pegar o coiso, coisa o coiso na parede e joga o
-                coiso na caixa d'agua
+                Não. O procedimento é minimamente invasivo, realizado com
+                anestesia local e máximo conforto.
               </p>
             </div>
           </div>
           <div class="perguntas">
-            <div id="pergunta-mais">
-              <h1>Como que coisa o coiso meu fih?</h1>
+            <div class="pergunta-mais">
+              <h1>Como é a primeira consulta?</h1>
               <span class="material-symbols-outlined"> add_2 </span>
             </div>
             <div class="div-resposta">
               <p>
-                Assim, tem que pegar o coiso, coisa o coiso na parede e joga o
-                coiso na caixa d'agua
+                Realizamos uma avaliação completa com exames digitais,
+                conversamos sobre seus objetivos e elaboramos um plano
+                personalizado.
               </p>
             </div>
           </div>
           <div class="perguntas">
-            <div id="pergunta-mais">
-              <h1>Como que coisa o coiso meu fih?</h1>
+            <div class="pergunta-mais">
+              <h1>Vocês atendem crianças?</h1>
               <span class="material-symbols-outlined"> add_2 </span>
             </div>
             <div class="div-resposta">
               <p>
-                Assim, tem que pegar o coiso, coisa o coiso na parede e joga o
-                coiso na caixa d'agua
+                Sim, contamos com odontopediatras especializadas em criar uma
+                experiência leve e divertida.
               </p>
             </div>
           </div>
         </div>
       </section>
+      <section id="agendamento"></section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>

@@ -1,3 +1,4 @@
+//Lógica do nav
 const nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
@@ -8,6 +9,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+// Lógica do slider da section de resultados
 let proximo = document.querySelector("#proximo");
 let anterior = document.querySelector("#anterior");
 let imagens = document.querySelectorAll(".axd-img");
@@ -46,6 +49,8 @@ function slideAnterior() {
   }, 10);
 }
 
+
+// Lógica do slider da section de depoimentos
 new Swiper(".card-wrapper", {
   loop: true,
   spaceBetween: 30,
@@ -76,6 +81,7 @@ new Swiper(".card-wrapper", {
     },
   },
 });
+
 
 // Lógica do FAQ
 let perguntas = document.querySelectorAll(".perguntas");
