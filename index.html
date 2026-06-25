@@ -34,19 +34,20 @@
       </a>
       <ul>
         <li><a href="#procedimentos-sec">Procedimentos</a></li>
-        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#resultados ">Resultados</a></li>
         <li><a href="#anterior">Espaço</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
-      <a href="" class="bt-agendar-consulta-nav"> Agendar Consulta </a>
+      <a href="#agendamento" class="bt-agendar-consulta-nav"> Agendar Consulta </a>
     </nav>
+    <!-- <div id="fundo-rosa"></div> -->
     <header id="header">
-      <div id="fundo-rosa"></div>
       <div id="hero">
         <div id="textos">
           <p id="cro">
-            <span class="material-symbols-outlined"> check_circle </span>Clinica premium - CRO 12.345
+            <span class="material-symbols-outlined"> check_circle </span>Clinica
+            premium - CRO 12.345
           </p>
           <h1>
             O sorriso que você <br />
@@ -69,9 +70,7 @@
               Agendar Consulta
               <span class="material-symbols-outlined"> calendar_month </span>
             </a>
-            <a href="#" id="procedimentos">
-              Nossos Procedimentos
-            </a>
+            <a href="#" id="procedimentos"> Nossos Procedimentos </a>
           </div>
           <div id="avaliacoes">
             <div>
@@ -171,7 +170,7 @@
                 reais dos nossos <br />
                 pacientes.
               </h1>
-              <p class="descricao descricao-resultados  ">
+              <p class="descricao descricao-resultados">
                 Descubra como um novo sorisso pode renovar sua <br />
                 confiança. Oferecemos soluções personalizadas e <br />
                 tecnologia de ponta.
@@ -202,17 +201,6 @@
       </section>
       <section id="espaco">
         <div id="texto-espaco">
-          <!-- <p id="comeco">NOSSO ESPAÇO</p>
-          <h1>
-            Um espaço <br />
-            feito para o <br />
-            seu bem-estar
-          </h1>
-          <p id="desc-espaco">
-            Tecnologia, conforto e acolhimento <br />
-            para que você tenha a melhor <br />
-            experiência possível.
-          </p> -->
           <div class="titulo-sub-descricao">
             <p class="titulo">NOSSO ESPAÇO</p>
             <h1>
@@ -227,13 +215,9 @@
             </p>
           </div>
           <hr />
-          <!-- <a href="#" id="agendar-espaco">
-            <p>Agendar Consulta</p>
-            <img src="recursos/seta-para-esquerda.png" alt="" />
-          </a> -->
           <a href="#" id="bt-agendar-consulta">
-              Agendar Consulta
-              <span class="material-symbols-outlined"> calendar_month </span>
+            Agendar Consulta
+            <span class="material-symbols-outlined"> calendar_month </span>
           </a>
         </div>
         <video src="recursos/video-clinica.mp4" controls></video>
@@ -253,8 +237,6 @@
         </div>
       </section>
       <section id="depoimentos">
-        <!-- <p id="nosso-espaco">DEPOIMENTOS</p>
-        <h1>Quem confia em nós,<br />fica conosco</h1> -->
         <div class="titulo-sub-descricao">
           <p class="titulo">DEPOIMENTOS</p>
           <h1>Quem confia em nós,<br />fica conosco</h1>
@@ -608,7 +590,68 @@
           </div>
         </div>
       </section>
-      <section id="agendamento"></section>
+      <section id="agendamento">
+        <div id="container-agendamento">
+          <div id="parte-esquerda-agendamento">
+            <div class="titulo-sub-descricao">
+              <p class="titulo">AGENDAMENTO</p>
+              <h1>
+                Reserve sua consulta <br />
+                em menos de um <br />
+                minuto.
+              </h1>
+              <p class="descricao">
+                Preencha o formulário e nossa equipe entrará em contato para
+                <br />
+                confirmar seu horário com todo o cuidado.
+              </p>
+            </div>
+            <div id="checklist">
+              <p>
+                <span class="material-symbols-outlined"> check </span> Sem
+                Compromisso
+              </p>
+              <p>
+                <span class="material-symbols-outlined"> check </span
+                >Atendimento humanizado
+              </p>
+              <p>
+                <span class="material-symbols-outlined"> check </span>Resposta
+                em até 30 min
+              </p>
+            </div>
+          </div>
+          <div id="parte-direita-agendamento">
+            <form action="#" method="post">
+              <label for="nome">NOME COMPLETO</label>
+              <input type="text" id="nome" placeholder="Como poderemos te chamar?" required maxlength="50">
+
+              <label for="whatsapp">WHATSAPP</label>
+              <input type="text" id="whatsapp" placeholder="(11) 99999-9999" required maxlength="50">
+
+              <label for="procedimento">PROCEDIMENTO</label>
+              <select name="procedimento" id="procedimento">
+                <option value="clareamento">Clareamento</option>
+                <option value="ortodontia">Ortodontia</option>
+                <option value="implantes">Implantes</option>
+                <option value="limpeza">Limpeza</option>
+                <option value="lentes-dentais">Lentes Dentais</option>
+                <option value="avaliacao">Avaliação</option>
+              </select>
+
+              <div id="data-horario">
+                <label for="data">DATA</label>
+                <input type="date" name="data" id="data">
+
+                <label for="horario">HORÁRIO</label>
+                <input type="time" name="horario" id="horario">
+              </div>
+
+              <button type="submit">Confirmar agendamento<span class="material-symbols-outlined"> calendar_month </span></button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>

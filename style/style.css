@@ -4,17 +4,23 @@
   box-sizing: border-box;
 }
 
-header #fundo-rosa {
+/*header #fundo-rosa {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   background-color: #b5866c;
   width: 100%;
-  /* height: 639px; */
-  height: 813.5px;
+  /* height: 639px; 
+  min-height: 658.6px;
   z-index: -4;
   opacity: 0.36;
   filter: blur(px);
+}*/
+
+#fundo-rosa{
+  /* border: 1px solid black; */
+  width: 100%;
+  z-index: -1;
 }
 
 nav {
@@ -33,7 +39,8 @@ nav {
   bottom: 100%;
   transition: background-color 0.3s ease;
   z-index: 10;
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  background-color: #b5927f7a;
 }
 
 nav.sticky-nav {
@@ -90,16 +97,19 @@ nav a p {
 } */
 
 header {
-  height: 755px;
-  /* border: 1px solid black; */
+  /* height: 755px; */
+  max-height: 610px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 70px 0;
+  background-color: #b5927f7a;
+  /* border: 1px solid black; */
 }
 
 header #hero {
   width: 70vw;
-  height: 525px;
+  max-height: 470px;
   margin: auto;
 
   display: flex;
@@ -176,7 +186,8 @@ header #hero #textos #botoes {
   font-weight: 600;
   color: white;
   text-decoration: none;
-  width: 190px;
+  max-width: 150px;
+  min-width: 150px;
 }
 
 #bt-agendar-consulta:hover {
@@ -261,8 +272,8 @@ header #hero #fotos-local::before {
 header #hero #fotos-local img {
   position: relative;
   z-index: 2;
-  height: 680px;
-  top: 36px;
+  height: 570px;
+  top: 19.4px;
   transform: scaleX(-1);
   /*border: 1px solid black;*/
 }
@@ -273,7 +284,7 @@ main {
 
 #procedimentos-sec {
   width: 70vw;
-  margin: 170px auto;
+  margin: 13.5% auto;
   /* padding: 80px 0; */
   /* border: 1px solid black; */
 }
@@ -308,7 +319,8 @@ main {
 #procedimentos-sec #container .proced {
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
-  width: 280px;
+  max-width: 280px;
+  min-width: 250px;
   height: 160px;
   border-radius: 18px;
 
@@ -363,8 +375,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 70vw;
-
-  margin: 0px auto 170px;
+  max-width: 1145px;
+  margin: 0px auto 13.5%;
 }
 
 #container-resultados {
@@ -431,7 +443,7 @@ main {
 
 #espaco {
   width: 70vw;
-  margin: 0px auto 170px;
+  margin: 0px auto 13.5%;
 
   display: flex;
   justify-content: space-between;
@@ -510,7 +522,7 @@ main {
 
 #depoimentos {
   width: 70vw;
-  margin: 0px auto 170px;
+  margin: 0px auto 13.5%;
   /* border: 1px solid black; */
 }
 
@@ -619,7 +631,7 @@ main {
 #faq {
   /* border: 1px solid black; */
   width: 70vw;
-  margin: 0px auto 170px;
+  margin: 0px auto 13.5%;
 
   display: flex;
   justify-content: center;
@@ -734,13 +746,42 @@ main {
   transform: rotate(45deg);
 }
 
+#agendamento{
+  border: 1px solid black;
+  width: 70vw;
+  margin: auto;
+  margin: 0px auto 13.5%;
+}
+
+#container-agendamento{
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#parte-esquerda-agendamento{
+  border: 1px solid red;
+}
+
+#checklist{
+  border: 1px solid black;
+}
+
+#parte-direita-agendamento{
+  border: 1px solid red;
+}
+
 @media (min-width: 1637px) {
   header #hero,
   #procedimentos-sec,
   #resultados,
   #espaco,
   #depoimentos,
-  #faq {
+  #faq, #agendamento {
     width: 1145px;
   }
 }
