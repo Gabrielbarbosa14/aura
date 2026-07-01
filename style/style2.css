@@ -1,11 +1,11 @@
-:root{
+:root {
   /* Paleta principal */
   --cor-principal: #b77e64; /**/
-  --cor-principal-hover: #B5745A;
+  --cor-principal-hover: #b5745a;
   --cor-acento: #976248;
 
   /* Fundos */
-  --fundo-bege: #DCCBC2;
+  --fundo-bege: #dccbc2;
   --fundo-rosa: #f2ebe6;
   --fundo-neutro: #f7f4f2;
 
@@ -13,7 +13,7 @@
   --branco-section: var(--fundo-neutro);
   --rosa-section: var(--fundo-rosa);
   /* --rosa-agendamento: var(--fundo-rosa); */
-  --rosa-agendamento: #DCCBC2;
+  --rosa-agendamento: #dccbc2;
 
   /* Apoio */
   --icone-fundo: #ecddd6;
@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 
-#fundo-rosa{
+#fundo-rosa {
   /* border: 1px solid black; */
   width: 100%;
   z-index: -1;
@@ -83,20 +83,6 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-.bt-agendar-consulta-nav {
-  color: white;
-  text-decoration: none;
-  background-color: var(--cor-principal);
-  padding: 9.5px;
-  border-radius: 28px;
-  transition: background-color 0.2s ease;
-  font-family: "roboto", sans-serif;
-}
-
-.bt-agendar-consulta-nav:hover {
-  background-color: var(--cor-principal-hover);
-}
-
 header {
   /* border: 1px solid black; */
   max-height: 610px;
@@ -133,7 +119,7 @@ header #textos #cro {
   width: fit-content;
   padding: 8px 11px;
   color: black;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: "roboto", sans-serif;
   transition: color 0.3s ease;
 
@@ -152,7 +138,7 @@ header #hero #textos #cro span {
 }
 
 header #hero #textos h1 {
-  font-size: 3.8em;
+  font-size: 3.5em;
   margin-bottom: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -164,7 +150,8 @@ header #hero #textos h1 span {
 }
 
 header #hero #textos #descricao {
-  font-size: 1.4em;
+  font-size: 1.3em;
+  width: 590px;
 }
 
 header #hero #textos #botoes {
@@ -182,9 +169,11 @@ header #hero #textos #botoes {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
 
   background-color: var(--cor-principal);
-  padding: 8px 11px;
+  padding: 8px 16px;
   border-radius: 28px;
   transition: background-color 0.3s ease;
   font-size: 1em;
@@ -192,7 +181,7 @@ header #hero #textos #botoes {
   font-weight: 600;
   color: white;
   text-decoration: none;
-  max-width: 150px;
+  width: fit-content;
   min-width: 150px;
 }
 
@@ -242,7 +231,7 @@ header #hero #textos #avaliacoes div img {
   width: 22px;
 }
 
-header #hero #textos #avaliacoes p{
+header #hero #textos #avaliacoes p {
   font-family: "roboto", sans-serif;
 }
 
@@ -292,7 +281,7 @@ main {
   /*padding: 80px 0;*/
 }
 
-.section{
+.section {
   /* border: 1px solid black; */
   width: 100%;
   padding: 120px 0;
@@ -302,12 +291,12 @@ main {
   background-color: var(--branco-section);
 }
 
-.section-fundo-rosa{
+.section-fundo-rosa {
   background-color: var(--rosa-section);
 }
 
-.alinhamento-central-div{
-  width: 70vw;
+.alinhamento-central-div {
+  width: 68vw;
 }
 
 .titulo-sub-descricao .titulo {
@@ -325,9 +314,18 @@ main {
   margin: 10px 0px;
 }
 
+.titulo-sub-descricao #sub-procedimentos {
+  display: inline-block;
+  max-width: 688px;
+}
+
 .titulo-sub-descricao .descricao {
   font-size: 1.4em;
   /* font-size: 17px; */
+}
+
+.titulo-sub-descricao #descricao-procedimentos {
+  max-width: 802px;
 }
 
 #procedimentos-sec #container {
@@ -343,8 +341,9 @@ main {
 #procedimentos-sec #container .proced {
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
-  max-width: 280px;
-  min-width: 250px;
+  /* max-width: 280px;
+  min-width: 250px; */
+  width: 290px;
   height: 160px;
   border-radius: 18px;
 
@@ -399,14 +398,19 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-} 
+}
 
-.descricao-resultados {
+#sub-resultados {
+  max-width: 450px;
+}
+
+#descricao-resultados {
   margin-bottom: 13px;
+  max-width: 480px;
 }
 
 #resultados #container-resultados #resultados-elemen {
-  /* border: 1px solid green; */
+  /*border: 1px solid green;*/
   position: relative;
   width: min-content;
   min-height: min-content;
@@ -444,7 +448,7 @@ main {
   padding: 5px;
   border-radius: 50%;
   background-color: #b77e64;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: 0.3s ease;
 }
 
@@ -455,10 +459,18 @@ main {
   color: #b77e64;
 }
 
-#alinhamento-central-espaco{
+#alinhamento-central-espaco {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#sub-espaco {
+  max-width: 348px;
+}
+
+#descricao-espaco {
+  max-width: 320px;
 }
 
 #espaco #texto-espaco hr {
@@ -524,6 +536,10 @@ main {
   font-family: "roboto", sans-serif;
   font-weight: 600;
   font-size: 1.3em;
+}
+
+#sub-depoimentos {
+  max-width: 520px;
 }
 
 .card-wrapper {
@@ -616,7 +632,7 @@ main {
   width: 30px;
 }
 
-#alinhamento-central-faq{
+#alinhamento-central-faq {
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -729,24 +745,32 @@ main {
   transform: rotate(45deg);
 }
 
-#agendamento{
+#agendamento {
   background-color: var(--rosa-agendamento);
 }
 
-#alinhamento-central-div-agendamento{
+#sub-agendamento {
+  max-width: 560px;
+}
+
+#descricao-agendamento {
+  max-width: 550px;
+}
+
+#alinhamento-central-div-agendamento {
   /* border: 1px solid black; */
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#parte-esquerda-agendamento{
+#parte-esquerda-agendamento {
   /* border: 1px solid red; */
   min-width: 425px;
 }
 
-#checklist{
+#checklist {
   margin-top: 18px;
 
   display: flex;
@@ -756,7 +780,7 @@ main {
   gap: 9px;
 }
 
-.checklist-p{
+.checklist-p {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   /* font-family: 17px; */
@@ -768,7 +792,7 @@ main {
   gap: 4px;
 }
 
-.checklist-p span{
+.checklist-p span {
   color: white;
   background-color: #976248;
   border-radius: 50%;
@@ -776,7 +800,7 @@ main {
   font-size: 0.9em;
 }
 
-#parte-direita-agendamento{
+#parte-direita-agendamento {
   /* border: 1px solid red; */
   background-color: var(--branco-section);
   border-radius: 22px;
@@ -789,7 +813,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.283) 0px 25px 40px -12px;
 }
 
-form{
+form {
   /* border: 1px solid black; */
   height: 100%;
   width: 100%;
@@ -800,37 +824,37 @@ form{
   gap: 16px;
 }
 
-.controle-do-form{
+.controle-do-form {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.controle-do-form label{
+.controle-do-form label {
   font-family: "roboto", sans-serif;
   font-size: 0.9em;
 }
 
-.controle-do-form input{
+.controle-do-form input {
   height: 37px;
   border-radius: 40px;
   padding: 0px 12px;
   border: 1px solid rgba(0, 0, 0, 0.611);
 }
 
-.controle-do-form input:focus{
+.controle-do-form input:focus {
   outline: 1px solid var(--cor-principal);
   border: 1.5px solid var(--cor-principal);
 }
 
-.controle-do-form input::placeholder{
+.controle-do-form input::placeholder {
   font-family: "roboto", sans-serif;
   font-size: 1.1em;
   color: rgba(0, 0, 0, 0.684);
 }
 
-.controle-do-form select{
+.controle-do-form select {
   height: 37px;
   border-radius: 40px;
   padding: 0px 12px;
@@ -839,21 +863,21 @@ form{
   font-size: 0.9em;
 }
 
-.controle-do-form select:focus{
+.controle-do-form select:focus {
   outline: 1px solid var(--cor-principal);
-  border: 1.5px solid var(--cor-principal)
+  border: 1.5px solid var(--cor-principal);
 }
 
-#data-horario{
+#data-horario {
   display: flex;
   justify-content: space-between;
 }
 
-#data-horario .controle-do-form{
+#data-horario .controle-do-form {
   width: 165px;
 }
 
-form button{
+form button {
   border-radius: 28px;
   border: none;
   background-color: #b77e64;
@@ -870,17 +894,17 @@ form button{
   gap: 5px;
 }
 
-form button:hover{
+form button:hover {
   cursor: pointer;
-  background-color: #B5745A;
+  background-color: #b5745a;
 }
 
 @media (min-width: 1637px) {
-  .alinhamento-central-div{
-    width: 1145px;
+  .alinhamento-central-div {
+    width: 1050px;
   }
 
-  header #hero{
+  header #hero {
     width: 1145px;
   }
 }

@@ -1,8 +1,8 @@
-:root{
-  --cor-principal: #B5866C;
+:root {
+  --cor-principal: #b5866c;
   --branco-section: #f5f5f5;
   --rosa-section: #fbece4;
-  --rosa-agendamento: #FBECE4;
+  --rosa-agendamento: #fbece4;
 }
 
 * {
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-#fundo-rosa{
+#fundo-rosa {
   /* border: 1px solid black; */
   width: 100%;
   z-index: -1;
@@ -35,7 +35,7 @@ nav {
   z-index: 10;
   /* margin-top: 5px; */
   /* background-color: #b5927f7a; */
-  background-color: #DCCBC2;
+  background-color: #dccbc2;
 }
 
 nav.sticky-nav {
@@ -87,7 +87,7 @@ header {
   max-height: 610px;
   padding: 70px 0;
   /* background-color: #b5927f7a; */
-  background-color: #DCCBC2;
+  background-color: #dccbc2;
 
   display: flex;
   justify-content: center;
@@ -141,7 +141,7 @@ header #hero #textos h1 {
 
 header #hero #textos h1 span {
   /* color: #b5866c; */
-  color: #BE845C;
+  color: #be845c;
   font-style: italic;
 }
 
@@ -270,7 +270,7 @@ main {
   /*padding: 80px 0;*/
 }
 
-.section{
+.section {
   /* border: 1px solid black; */
   width: 100%;
   padding: 120px 0;
@@ -280,18 +280,18 @@ main {
   background-color: var(--branco-section);
 }
 
-.section-fundo-rosa{
+.section-fundo-rosa {
   background-color: var(--rosa-section);
 }
 
-.alinhamento-central-div{
+.alinhamento-central-div {
   width: 70vw;
 }
 
 .titulo-sub-descricao .titulo {
   font-family: "roboto", sans-serif;
   /* color: #b5866c; */
-  color: #BE845C;
+  color: #be845c;
   /* color: #B5866C; */
   font-weight: 500;
   font-size: 1.3em;
@@ -321,10 +321,11 @@ main {
 #procedimentos-sec #container .proced {
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
-  max-width: 280px;
-  min-width: 250px;
+  width: 620px;
+  /* min-width: 250px; */
   height: 160px;
   border-radius: 18px;
+  display: none;
 
   display: flex;
   justify-content: center;
@@ -377,7 +378,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-} 
+}
 
 .descricao-resultados {
   margin-bottom: 13px;
@@ -432,7 +433,7 @@ main {
   color: white;
 }
 
-#alinhamento-central-espaco{
+#alinhamento-central-espaco {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -593,7 +594,7 @@ main {
   width: 30px;
 }
 
-#alinhamento-central-faq{
+#alinhamento-central-faq {
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -609,7 +610,7 @@ main {
 #faq #titulo-sub p {
   font-family: "roboto", sans-serif;
   font-weight: 500;
-  color: #BE845C;
+  color: #be845c;
   font-size: 1.3em;
 }
 
@@ -706,35 +707,35 @@ main {
   transform: rotate(45deg);
 }
 
-#agendamento{
+#agendamento {
   background-color: var(--rosa-agendamento);
 }
 
-#titulo-agendamento{
+#titulo-agendamento {
   /* color: #7a4632; */
 }
 
-#alinhamento-central-div-agendamento{
+#alinhamento-central-div-agendamento {
   /* border: 1px solid black; */
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#parte-esquerda-agendamento{
+#parte-esquerda-agendamento {
   /* border: 1px solid red; */
   min-width: 425px;
 }
 
-#checklist{
+#checklist {
   margin-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 4.2px;
 }
 
-#checklist p{
+#checklist p {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-family: 17px;
@@ -745,7 +746,7 @@ main {
   gap: 4px;
 }
 
-#parte-direita-agendamento{
+#parte-direita-agendamento {
   /* border: 1px solid red; */
   background-color: var(--branco-section);
   border-radius: 22px;
@@ -758,7 +759,7 @@ main {
   align-items: center;
 }
 
-form{
+form {
   /* border: 1px solid black; */
   height: 100%;
   width: 100%;
@@ -769,36 +770,36 @@ form{
   gap: 16px;
 }
 
-.controle-do-form{
+.controle-do-form {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.controle-do-form label{
+.controle-do-form label {
   font-family: "roboto", sans-serif;
   font-size: 0.9em;
 }
 
-.controle-do-form input{
+.controle-do-form input {
   height: 37px;
   border-radius: 40px;
   padding: 0px 12px;
   border: 1px solid rgba(0, 0, 0, 0.611);
 }
 
-.controle-do-form input:focus{
+.controle-do-form input:focus {
   outline: 1px solid #b5866c;
   border: 1px solid #b5866c;
 }
 
-.controle-do-form input::placeholder{
+.controle-do-form input::placeholder {
   font-family: "roboto", sans-serif;
   font-size: 1em;
 }
 
-.controle-do-form select{
+.controle-do-form select {
   height: 37px;
   border-radius: 40px;
   padding: 0px 12px;
@@ -808,11 +809,11 @@ form{
 }
 
 @media (min-width: 1637px) {
-  .alinhamento-central-div{
+  .alinhamento-central-div {
     width: 1145px;
   }
 
-  header #hero{
+  header #hero {
     width: 1145px;
   }
 }
