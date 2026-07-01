@@ -25,7 +25,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style2.css" />
   </head>
   <body>
     <nav id="nav">
@@ -34,12 +34,15 @@
       </a>
       <ul>
         <li><a href="#procedimentos-sec">Procedimentos</a></li>
-        <li><a href="#resultados ">Resultados</a></li>
-        <li><a href="#anterior">Espaço</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#espaco">Espaço</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="#agendamento" class="bt-agendar-consulta-nav"> Agendar Consulta </a>
+      <a href="#agendamento" class="bt-agendar-consulta">
+        Agendar Consulta
+        <span class="material-symbols-outlined"> calendar_month </span>
+      </a>
     </nav>
     <!-- <div id="fundo-rosa"></div> -->
     <header id="header">
@@ -66,7 +69,7 @@
             humanizado.
           </p>
           <div id="botoes">
-            <a href="#" id="bt-agendar-consulta">
+            <a href="#agendamento" class="bt-agendar-consulta">
               Agendar Consulta
               <span class="material-symbols-outlined"> calendar_month </span>
             </a>
@@ -178,7 +181,7 @@
                 tecnologia de ponta.
               </p>
             </div>
-            <a href="#" id="bt-agendar-consulta">
+            <a href="#agendamento" class="bt-agendar-consulta">
               Agendar Consulta
               <span class="material-symbols-outlined"> calendar_month </span>
             </a>
@@ -218,7 +221,7 @@
               </p>
             </div>
             <hr />
-            <a href="#" id="bt-agendar-consulta">
+            <a href="#agendamento" class="bt-agendar-consulta">
               Agendar Consulta
               <span class="material-symbols-outlined"> calendar_month </span>
             </a>
@@ -226,15 +229,15 @@
           <video src="recursos/video-clinica.mp4" controls></video>
           <div id="infos-espaco">
             <div class="info">
-              <span class="material-symbols-outlined"> Stethoscope </span>
+              <span class="material-symbols-outlined"> verified_user </span>
               <p>Ambiente seguro e higienizado</p>
             </div>
             <div class="info">
-              <span class="material-symbols-outlined"> Stethoscope </span>
+              <span class="material-symbols-outlined"> medical_services </span>
               <p>Consultórios modernos e equipados</p>
             </div>
             <div class="info">
-              <span class="material-symbols-outlined"> Stethoscope </span>
+              <span class="material-symbols-outlined"> favorite </span>
               <p>Pensado para o seu conforto</p>
             </div>
           </div>
@@ -599,45 +602,44 @@
         </div>
       </section>
       <section id="agendamento" class="section-fundo-rosa section">
-        <div id="container-agendamento">
+        <div class="alinhamento-central-div" id="alinhamento-central-div-agendamento">
           <div id="parte-esquerda-agendamento">
             <div class="titulo-sub-descricao">
-              <p class="titulo">AGENDAMENTO</p>
+              <p id="titulo-agendamento" class="titulo">AGENDAMENTO</p>
               <h1>
                 Reserve sua consulta <br />
                 em menos de um <br />
                 minuto.
               </h1>
               <p class="descricao">
-                Preencha o formulário e nossa equipe entrará em contato para
-                <br />
-                confirmar seu horário com todo o cuidado.
+                Preencha o formulário e nossa equipe entrará em contato <br>para confirmar seu horário com todo o cuidado.
               </p>
             </div>
             <div id="checklist">
-              <p>
-                <span class="material-symbols-outlined"> check </span> Sem
-                Compromisso
+              <p class="checklist-p">
+                <span class="material-symbols-outlined"> check </span> Sem Compromisso
               </p>
-              <p>
-                <span class="material-symbols-outlined"> check </span
-                >Atendimento humanizado
+              <p class="checklist-p">
+                <span class="material-symbols-outlined"> check </span> Atendimento humanizado
               </p>
-              <p>
-                <span class="material-symbols-outlined"> check </span>Resposta
-                em até 30 min
+              <p class="checklist-p">
+                <span class="material-symbols-outlined"> check </span> Respostaem até 30 min
               </p>
             </div>
           </div>
           <div id="parte-direita-agendamento">
-            <div id="div-container-form">
-              <form action="#" method="post">
+            <form action="#" method="post">
+              <div class="controle-do-form">
                 <label for="nome">NOME COMPLETO</label>
                 <input type="text" id="nome" placeholder="Como poderemos te chamar?" required maxlength="50">
+              </div>
+              <div class="controle-do-form">
                 <label for="whatsapp">WHATSAPP</label>
-                <input type="text" id="whatsapp" placeholder="(11) 99999-9999" required maxlength="50">
+                <input type="number" id="whatsapp" placeholder="(11) 99999-9999" required maxlength="50">
+              </div>
+              <div class="controle-do-form">
                 <label for="procedimento">PROCEDIMENTO</label>
-                <select name="procedimento" id="procedimento">
+                <select name="procedimento" id="procedimento" required>
                   <option value="clareamento">Clareamento</option>
                   <option value="ortodontia">Ortodontia</option>
                   <option value="implantes">Implantes</option>
@@ -645,15 +647,19 @@
                   <option value="lentes-dentais">Lentes Dentais</option>
                   <option value="avaliacao">Avaliação</option>
                 </select>
-                <div id="data-horario">
+              </div>
+              <div id="data-horario">
+                <div class="controle-do-form">
                   <label for="data">DATA</label>
                   <input type="date" name="data" id="data">
+                </div>
+                <div class="controle-do-form">
                   <label for="horario">HORÁRIO</label>
                   <input type="time" name="horario" id="horario">
                 </div>
-                <button type="submit">Confirmar agendamento<span class="material-symbols-outlined"> calendar_month </span></button>
-              </form>
-            </div>
+              </div>
+              <button type="submit">Confirmar agendamento<span class="material-symbols-outlined"> calendar_month </span></button>
+            </form>
           </div>
         </div>
       </section>
