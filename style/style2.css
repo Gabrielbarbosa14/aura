@@ -85,8 +85,8 @@ nav ul li a:hover {
 
 header {
   /* border: 1px solid black; */
-  max-height: 610px;
-  padding: 70px 0;
+  /* max-height: 610px; */
+  padding: 50px 0;
   /* background-color: #b5927f7a; */
   background-color: var(--fundo-bege);
 
@@ -97,8 +97,10 @@ header {
 
 header #hero {
   /* border: 1px solid green; */
+  height: min-content;
+  height: 500px;
   width: 70vw;
-  max-height: 470px;
+  /* max-height: 470px; */
   margin: auto;
 
   display: flex;
@@ -141,17 +143,19 @@ header #hero #textos h1 {
   font-size: 3.5em;
   margin-bottom: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  max-width: 500px;
 }
 
 header #hero #textos h1 span {
   /* color: var(--cor-principal); */
   color: var(--cor-acento);
   font-style: italic;
+  font-weight: bold;
 }
 
 header #hero #textos #descricao {
   font-size: 1.3em;
-  width: 590px;
+  max-width: 450px;
 }
 
 header #hero #textos #botoes {
@@ -272,7 +276,7 @@ header #hero #fotos-local img {
   position: relative;
   z-index: 2;
   height: 570px;
-  top: 19.4px;
+  top: 14.8px;
   transform: scaleX(-1);
   /*border: 1px solid black;*/
 }
@@ -296,7 +300,7 @@ main {
 }
 
 .alinhamento-central-div {
-  width: 68vw;
+  width: 67vw;
 }
 
 .titulo-sub-descricao .titulo {
@@ -332,7 +336,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   gap: 20px;
   margin-top: 55px;
   /*border: 1px solid blue;*/
@@ -343,7 +347,8 @@ main {
   padding: 20px;
   /* max-width: 280px;
   min-width: 250px; */
-  width: 290px;
+  /* width: 290px; */
+  max-width: 270px;
   height: 160px;
   border-radius: 18px;
 
@@ -368,7 +373,7 @@ main {
   color: var(--cor-principal);
   padding: 5px;
   border-radius: 50%;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
   font-variation-settings:
     "FILL" 0,
     "wght" 400,
@@ -750,11 +755,11 @@ main {
 }
 
 #sub-agendamento {
-  max-width: 560px;
+  max-width: 440px;
 }
 
 #descricao-agendamento {
-  max-width: 550px;
+  max-width: 480px;
 }
 
 #alinhamento-central-div-agendamento {
@@ -804,28 +809,30 @@ main {
   /* border: 1px solid red; */
   background-color: var(--branco-section);
   border-radius: 22px;
-  width: 391px;
-  height: min-content;
+  max-width: 410px;
+  box-shadow: rgba(0, 0, 0, 0.283) 0px 25px 40px -12px;
+  height: 410px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.283) 0px 25px 40px -12px;
+  flex: 1;
 }
 
 form {
   /* border: 1px solid black; */
   height: 100%;
   width: 100%;
-  padding: 25px;
+  padding: 22px 25px;
 
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 16px;
+  gap: 17px;
 }
 
 .controle-do-form {
-  /* border: 1px solid black; */
+  /* border: 1px solid black;  */
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -841,6 +848,7 @@ form {
   border-radius: 40px;
   padding: 0px 12px;
   border: 1px solid rgba(0, 0, 0, 0.611);
+  max-width: 100%;
 }
 
 .controle-do-form input:focus {
@@ -871,10 +879,11 @@ form {
 #data-horario {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 #data-horario .controle-do-form {
-  width: 165px;
+  width: 180px;
 }
 
 form button {
@@ -899,15 +908,25 @@ form button:hover {
   background-color: #b5745a;
 }
 
-@media (min-width: 1637px) {
+@media (min-width: 1590px) {
   .alinhamento-central-div {
     width: 1050px;
   }
 
   header #hero {
-    width: 1145px;
+    width: 1050px;
   }
 }
+
+/* @media (min-width: 1637px) {
+  .alinhamento-central-div {
+    width: 1050px;
+  }
+
+  header #hero {
+    width: 1050px;
+  }
+} */
 
 /* @media (min-width: 1637px) {
   header #hero,
