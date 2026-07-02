@@ -9,7 +9,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 // Lógica do slider da section de resultados
 let proximo = document.querySelector("#proximo");
 let anterior = document.querySelector("#anterior");
@@ -17,23 +16,24 @@ let imagens = document.querySelectorAll(".axd-img");
 
 let contador = 0;
 
-function proximoSlide() {
+const proximoSlide = () => {
   document.querySelector(".img0").classList.remove("img0");
 
   if (contador < 5) {
-    ++contador;
+    contador++;
   } else {
     contador = 0;
   }
 
   imagens[contador].classList.add("img0");
-  imagens[contador].style.opacity = "0";
+  imagens[contador].computedStyleMap.opacity = "0";
   setTimeout(() => {
-    imagens[contador].style.opacity = "1";
+    imagens[contador].computedStyleMap.opacity = "1";
   }, 10);
-}
+};
+proximo.addEventListener("click", proximoSlide);
 
-function slideAnterior() {
+const slideAnterior = () => {
   document.querySelector(".img0").classList.remove("img0");
 
   if (contador == 0) {
@@ -47,8 +47,8 @@ function slideAnterior() {
   setTimeout(() => {
     imagens[contador].style.opacity = "1";
   }, 10);
-}
-
+};
+anterior.addEventListener("click", slideAnterior);
 
 // Lógica do slider da section de depoimentos
 new Swiper(".card-wrapper", {
@@ -81,7 +81,6 @@ new Swiper(".card-wrapper", {
     },
   },
 });
-
 
 // Lógica do FAQ
 let perguntas = document.querySelectorAll(".perguntas");

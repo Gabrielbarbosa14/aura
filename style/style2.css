@@ -98,7 +98,6 @@ header {
 header #hero {
   /* border: 1px solid green; */
   height: min-content;
-  height: 500px;
   width: 70vw;
   /* max-height: 470px; */
   margin: auto;
@@ -143,7 +142,7 @@ header #hero #textos h1 {
   font-size: 3.5em;
   margin-bottom: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 header #hero #textos h1 span {
@@ -155,7 +154,7 @@ header #hero #textos h1 span {
 
 header #hero #textos #descricao {
   font-size: 1.3em;
-  max-width: 450px;
+  max-width: 620px;
 }
 
 header #hero #textos #botoes {
@@ -275,8 +274,8 @@ header #hero #fotos-local::before {
 header #hero #fotos-local img {
   position: relative;
   z-index: 2;
-  height: 570px;
-  top: 14.8px;
+  height: 610px;
+  top: 50px;
   transform: scaleX(-1);
   /*border: 1px solid black;*/
 }
@@ -348,7 +347,7 @@ main {
   /* max-width: 280px;
   min-width: 250px; */
   /* width: 290px; */
-  max-width: 270px;
+  max-width: 275px;
   height: 160px;
   border-radius: 18px;
 
@@ -755,7 +754,7 @@ main {
 }
 
 #sub-agendamento {
-  max-width: 440px;
+  max-width: 520px;
 }
 
 #descricao-agendamento {
@@ -908,6 +907,15 @@ form button:hover {
   background-color: #b5745a;
 }
 
+footer {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #976248;
+}
+
 @media (min-width: 1590px) {
   .alinhamento-central-div {
     width: 1050px;
@@ -915,6 +923,20 @@ form button:hover {
 
   header #hero {
     width: 1050px;
+  }
+
+  #parte-direita-agendamento {
+    max-width: 470px;
+    height: 470px;
+  }
+
+  form {
+    padding: 28px 32px;
+    gap: 20px;
+  }
+
+  #data-horario .controle-do-form {
+    width: 210px;
   }
 }
 

@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/33491a7ff1.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,11 +58,7 @@
           </p>
           <h1>
             O sorriso que você merece,
-            <span
-              >com <br />
-              cuidado de <br />
-              verdade.</span
-            >
+            <span>com cuidado de verdade.</span>
           </h1>
           <p id="descricao">
             Odontologia estética e clínica de alto padrão em ambiente acolhedor.
@@ -190,10 +190,10 @@
             <img src="recursos/img5.jpg" alt="" class="axd-img" />
             <img src="recursos/img6.jpg" alt="" class="axd-img" />
             <div id="buttons">
-              <button id="anterior" onclick="slideAnterior()">
+              <button id="anterior">
                 <span class="material-symbols-outlined"> chevron_left </span>
               </button>
-              <button id="proximo" onclick="proximoSlide()">
+              <button id="proximo">
                 <span class="material-symbols-outlined"> chevron_right </span>
               </button>
             </div>
@@ -663,7 +663,13 @@
                 </div>
                 <div class="controle-do-form">
                   <label for="horario">HORÁRIO</label>
-                  <input type="time" name="horario" id="horario" min="08:00" max="18:00"/>
+                  <input
+                    type="time"
+                    name="horario"
+                    id="horario"
+                    min="08:00"
+                    max="18:00"
+                  />
                 </div>
               </div>
               <button type="submit">
@@ -676,6 +682,60 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="alinhamento-central-div">
+        <div id="bloco-footer-div1" class="bloco-footer-div">
+          <div id="div-topo-bloco-div1">
+            <img src="recursos/logo-aura-odonto.png" alt="" />
+            <h1>Aura Odonto</h1>
+          </div>
+          <p>
+            Odontologia premium com cuidado humano para transformar sorrisos e
+            vidas.
+          </p>
+        </div>
+        <div class="bloco-footer-div">
+          <h1>Horários</h1>
+          <p>
+            <span class="material-symbols-outlined"> schedule </span> Seg–Sex ·
+            08h às 20h
+          </p>
+          <p>
+            <span class="material-symbols-outlined"> schedule </span>Sábado ·
+            09h às 14h
+          </p>
+        </div>
+        <div class="bloco-footer-div">
+          <h1>Localização</h1>
+          <p>
+            <span class="material-symbols-outlined"> pin_drop </span> Av.
+            Paulista, 1500 · cj. 1204 Bela Vista · São Paulo / SP
+          </p>
+        </div>
+        <div class="bloco-footer-div">
+          <h1>Conecte-se</h1>
+          <div id="div-redes-sociais">
+            <i
+              class="fa-brands fa-instagram"
+              style="color: rgb(116, 192, 252)"
+            ></i>
+            <i
+              class="fa-brands fa-facebook-f"
+              style="color: rgb(116, 192, 252)"
+            ></i>
+            <i
+              class="fa-brands fa-whatsapp"
+              style="color: rgb(116, 192, 252)"
+            ></i>
+          </div>
+        </div>
+        <hr />
+        <div id="ultimos-textos-footer-div">
+          <p>© 2026 Aura Odonto. Todos os direitos reservados</p>
+          <p>CRO-SP 12.345 · Resp. Técnica Dra. Ana Clara de Almeida</p>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
   </body>
