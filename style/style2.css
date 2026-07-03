@@ -754,7 +754,7 @@ main {
 }
 
 #sub-agendamento {
-  max-width: 450px;
+  max-width: 520px;
 }
 
 #descricao-agendamento {
@@ -916,6 +916,84 @@ footer {
   background-color: #976248;
 }
 
+.alinhamento-central-div-footer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+#parte-cima-footer {
+  display: flex;
+}
+
+.bloco-footer-div {
+  border: 1px solid white;
+}
+
+.bloco-footer-div1 p {
+  margin-top: 15px;
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  max-width: 260px;
+}
+
+#div-topo-bloco-div1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+#div-topo-bloco-div1 h1 {
+  font-size: 1.8em;
+  font-family: "roboto", sans-serif;
+}
+
+#div-topo-bloco-div1 img {
+  width: 50px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.bloco-footer-div2 h1 {
+  font-size: 1.5em;
+  font-family: "roboto", sans-serif;
+  margin-bottom: 6px;
+}
+
+.bloco-footer-div2 p {
+  font-family: "roboto", sans-serif;
+  font-size: 1em;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bloco-footer-div2 p span {
+  font-size: 1em;
+}
+
+.bloco-footer-div3 h1 {
+  font-size: 1.5em;
+  font-family: "roboto", sans-serif;
+  margin-bottom: 6px;
+}
+
+.bloco-footer-div3 p {
+  font-family: "roboto", sans-serif;
+  font-size: 1em;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bloco-footer-div3 p span {
+  font-size: 1em;
+}
+
 @media (min-width: 1590px) {
   .alinhamento-central-div {
     width: 1050px;
@@ -937,6 +1015,10 @@ footer {
 
   #data-horario .controle-do-form {
     width: 210px;
+  }
+
+  #sub-agendamento {
+    max-width: 520px;
   }
 }
 
