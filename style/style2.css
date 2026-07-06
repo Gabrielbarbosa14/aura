@@ -475,7 +475,7 @@ header #hero #fotos-local img {
 }
 
 #sub-espaco {
-  max-width: 280px;
+  max-width: 260px;
 }
 
 #descricao-espaco {
@@ -533,7 +533,6 @@ header #hero #fotos-local img {
   border-radius: 50%;
   color: white;
   transition: 0.3s ease;
-  margin-left: 3px;
   font-variation-settings:
     "FILL" 0,
     "wght" 400,
@@ -1048,239 +1047,6 @@ footer hr {
   margin: 0;
 }
 
-@media (max-width: 900px) {
-  #parte-cima-footer {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  footer {
-    padding: 64px 0 40px;
-  }
-
-  #parte-cima-footer {
-    grid-template-columns: 1fr;
-  }
-
-  #ultimos-textos-footer-div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 1100px) {
-  nav {
-    gap: 30px;
-    padding: 0 24px;
-    justify-content: space-between;
-  }
-
-  nav ul {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  header #hero {
-    width: min(90vw, 900px);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-  }
-
-  header #hero #textos {
-    max-width: 100%;
-  }
-
-  header #hero #textos h1 {
-    font-size: 2.6em;
-    max-width: 560px;
-  }
-
-  header #hero #textos #botoes {
-    flex-wrap: wrap;
-  }
-
-  header #hero #fotos-local {
-    justify-content: center;
-    width: 100%;
-  }
-
-  header #hero #fotos-local img {
-    height: min(48vw, 420px);
-    top: 0;
-  }
-
-  .alinhamento-central-div {
-    width: min(90vw, 900px);
-  }
-
-  #container-resultados,
-  #alinhamento-central-espaco,
-  #alinhamento-central-div-agendamento {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-  }
-
-  #resultados #container-resultados #resultados-elemen {
-    width: 100%;
-  }
-
-  #espaco #texto-espaco,
-  #espaco #infos-espaco {
-    width: 100%;
-  }
-
-  #espaco video {
-    width: min(100%, 360px);
-  }
-
-  #procedimentos-sec #container .proced {
-    width: calc(50% - 10px);
-    max-width: none;
-    min-height: 155px;
-  }
-
-  #faq #div-faq .perguntas {
-    width: min(100%, 640px);
-  }
-
-  #parte-esquerda-agendamento {
-    min-width: unset;
-    width: 100%;
-  }
-
-  #parte-direita-agendamento {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  form {
-    max-width: 100%;
-  }
-
-  #data-horario {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  #data-horario .controle-do-form {
-    width: 100%;
-  }
-}
-
-@media (max-width: 700px) {
-  nav {
-    height: auto;
-    padding: 12px 16px;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  nav ul {
-    width: 100%;
-    justify-content: center;
-    gap: 12px 16px;
-  }
-
-  nav ul li a {
-    font-size: 0.86em;
-  }
-
-  header {
-    padding: 30px 0 40px;
-  }
-
-  header #hero {
-    width: min(92vw, 100%);
-    align-items: center;
-    text-align: center;
-  }
-
-  header #hero #textos #cro {
-    margin: 0 auto 16px;
-  }
-
-  header #hero #textos h1 {
-    font-size: 2.15em;
-    margin-bottom: 16px;
-  }
-
-  header #hero #textos #descricao {
-    font-size: 1em;
-  }
-
-  header #hero #textos #botoes {
-    justify-content: center;
-  }
-
-  header #hero #textos #botoes .bt-agendar-consulta {
-    width: 100%;
-  }
-
-  header #hero #textos #avaliacoes {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  header #hero #fotos-local img {
-    height: auto;
-    width: min(86vw, 320px);
-  }
-
-  .section {
-    padding: 80px 0;
-  }
-
-  .alinhamento-central-div {
-    width: min(92vw, 100%);
-  }
-
-  .titulo-sub-descricao h1 {
-    font-size: 1.7em;
-  }
-
-  #procedimentos-sec #container .proced {
-    width: 100%;
-    max-width: none;
-    min-height: auto;
-  }
-
-  #resultados #container-resultados #resultados-elemen img {
-    width: min(100%, 320px);
-  }
-
-  #espaco #infos-espaco {
-    gap: 12px;
-  }
-
-  #espaco #infos-espaco .info {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .card-wrapper {
-    margin: 0 0 20px;
-  }
-
-  #faq #div-faq .perguntas {
-    width: 100%;
-  }
-
-  form {
-    padding: 18px 16px;
-    gap: 14px;
-  }
-
-  .controle-do-form input,
-  .controle-do-form select {
-    height: 42px;
-  }
-}
-
 @media (min-width: 1590px) {
   html {
     font-size: 17px;
@@ -1478,32 +1244,293 @@ footer hr {
   }
 }
 
-/* @media (min-width: 1637px) {
-  .alinhamento-central-div {
-    width: 1050px;
+@media (max-width: 1100px) {
+  nav {
+    gap: 30px;
+    padding: 0 32px;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   header #hero {
-    width: 1050px;
+    width: 85vw;
   }
-} */
 
-/* @media (min-width: 1637px) {
-  header #hero,
-  #procedimentos-sec,
-  #resultados,
-  #espaco,
-  #depoimentos,
-  #faq, #agendamento {
-    width: 1145px;
+  header #textos #cro {
+    font-size: 0.75em;
   }
-} */
 
-/* 
-AJUSTAR TODO O LAYOUT A PARTIR DESSA LARGURA
-
-@media (max-width: 1260px){
-  #procedimentos-sec #container .proced{
-    width: 250px;
+  header #hero #textos h1 {
+    font-size: 2.6em;
+    max-width: 420px;
   }
-} */
+
+  header #hero #fotos-local img {
+    height: 500px;
+    top: 20px;
+  }
+
+  .alinhamento-central-div {
+    width: 85vw;
+  }
+
+  #container-resultados {
+    gap: 35px;
+  }
+
+  #resultados #container-resultados #resultados-elemen img{
+    max-width: 340px;
+  }
+
+  #espaco video{
+    width: 240px;
+  }
+
+  #espaco #infos-espaco .info p {
+    font-size: 1.1em;
+  }
+
+  #procedimentos-sec #container .proced {
+    width: calc(50% - 10px);
+    max-width: none;
+    min-height: 155px;
+  }
+
+  #faq #div-faq .perguntas {
+    width: min(100%, 640px);
+  }
+
+  #alinhamento-central-div-agendamento {
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+  }
+
+  #sub-agendamento {
+    max-width: 100%;
+  }
+
+  #descricao-agendamento {
+    max-width: 70%;
+  }
+
+  #parte-esquerda-agendamento {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #parte-direita-agendamento {
+    min-width: 100%;
+    height: 480px;
+    flex: none;
+  }
+
+  form{
+    padding: 22px 28px;
+    gap: 29px;
+  }
+
+  #data-horario .controle-do-form {
+    width: 50%;
+  }
+
+  form button{
+    padding: 13px 0px;
+  }
+
+  #parte-cima-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 933px) {
+  /* header #textos{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  header #textos #cro {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+
+  header #hero #textos h1{
+    max-width: 90%;
+  }
+
+  #hero{
+    flex-direction: column;
+  }
+
+  header #hero #fotos-local img {
+    max-height: 440px;
+  } */
+
+  .alinhamento-central-div{
+    width: 90vw;
+  }
+
+  header #hero{
+    width: 88vw;
+  }
+
+  header #textos #cro {
+    font-size: 0.75em;
+  }
+
+  header #hero #textos h1{
+    font-size: 2.3em;
+    margin-bottom: 13px;
+  }
+
+  header #hero #textos #descricao {
+    font-size: 1.03em;
+  }
+
+  header #hero #fotos-local img {
+    height: 440px;
+  }
+
+  #alinhamento-central-espaco{
+    gap: 15px;
+  }
+
+  #espaco #infos-espaco .info span {
+    padding: 12px;
+    font-size: 1.8em;
+  }
+
+}
+
+@media (max-width: 825px) {
+  nav {
+    height: auto;
+    padding: 12px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 12px 16px;
+  }
+
+  nav ul li a {
+    font-size: 0.86em;
+  }
+
+  header {
+    padding: 30px 0 40px;
+  }
+
+  header #hero {
+    width: min(92vw, 100%);
+    align-items: center;
+    text-align: center;
+  }
+
+  header #hero #textos #cro {
+    margin: 0 auto 16px;
+  }
+
+  header #hero #textos h1 {
+    font-size: 2.15em;
+    margin-bottom: 16px;
+  }
+
+  header #hero #textos #descricao {
+    font-size: 1em;
+  }
+
+  header #hero #textos #botoes {
+    justify-content: center;
+  }
+
+  header #hero #textos #botoes .bt-agendar-consulta {
+    width: 100%;
+  }
+
+  header #hero #textos #avaliacoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header #hero #fotos-local img {
+    height: auto;
+    width: min(86vw, 320px);
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .alinhamento-central-div {
+    width: min(92vw, 100%);
+  }
+
+  .titulo-sub-descricao h1 {
+    font-size: 1.7em;
+  }
+
+  #procedimentos-sec #container .proced {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+  }
+
+  #resultados #container-resultados #resultados-elemen img {
+    width: min(100%, 320px);
+  }
+
+  #espaco #infos-espaco {
+    gap: 12px;
+  }
+
+  #espaco #infos-espaco .info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .card-wrapper {
+    margin: 0 0 20px;
+  }
+
+  #faq #div-faq .perguntas {
+    width: 100%;
+  }
+
+  form {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .controle-do-form input,
+  .controle-do-form select {
+    height: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 64px 0 40px;
+  }
+
+  #parte-cima-footer {
+    grid-template-columns: 1fr;
+  }
+
+  #ultimos-textos-footer-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
