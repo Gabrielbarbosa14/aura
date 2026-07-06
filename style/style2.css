@@ -281,10 +281,6 @@ header #hero #fotos-local img {
   /*border: 1px solid black;*/
 }
 
-main {
-  /*padding: 80px 0;*/
-}
-
 .section {
   /* border: 1px solid black; */
   width: 100%;
@@ -348,7 +344,7 @@ main {
   /* max-width: 280px;
   min-width: 250px; */
   /* width: 290px; */
-  max-width: 275px;
+  max-width: 285px;
   height: 160px;
   border-radius: 18px;
 
@@ -387,10 +383,6 @@ main {
   color: white;
 }
 
-#procedimentos-sec #container .proced .texto-e-desc {
-  /* margin-top: 6px; */
-}
-
 #procedimentos-sec #container .proced .texto-e-desc h1 {
   font-size: 1.2em;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -398,7 +390,7 @@ main {
   margin-bottom: 4px;
 }
 
-#procedimentos-sec #container .proced .texto-e-desc p{
+#procedimentos-sec #container .proced .texto-e-desc p {
   font-size: 0.9em;
 }
 
@@ -410,8 +402,15 @@ main {
   align-items: center;
 }
 
+#lado-esquerdo hr {
+  margin: 19px 0;
+  width: 40px;
+  border: 1.5px solid var(--cor-principal);
+  border-radius: 28px;
+}
+
 #sub-resultados {
-  max-width: 450px;
+  max-width: 480px;
 }
 
 #descricao-resultados {
@@ -476,7 +475,7 @@ main {
 }
 
 #sub-espaco {
-  max-width: 250px;
+  max-width: 280px;
 }
 
 #descricao-espaco {
@@ -993,8 +992,6 @@ footer {
   padding: 4px;
 }
 
-
-
 #localizacao-div3 span {
   font-size: 1em;
   position: relative;
@@ -1021,7 +1018,9 @@ footer {
   align-items: center;
   font-size: 1.05em;
   color: #fffaf7;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 #div-redes-sociais a:hover {
@@ -1070,13 +1069,384 @@ footer hr {
   }
 }
 
-@media (min-width: 1590px) {
-  .alinhamento-central-div {
-    width: 1050px;
+@media (max-width: 1100px) {
+  nav {
+    gap: 30px;
+    padding: 0 24px;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   header #hero {
-    width: 1050px;
+    width: min(90vw, 900px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  header #hero #textos {
+    max-width: 100%;
+  }
+
+  header #hero #textos h1 {
+    font-size: 2.6em;
+    max-width: 560px;
+  }
+
+  header #hero #textos #botoes {
+    flex-wrap: wrap;
+  }
+
+  header #hero #fotos-local {
+    justify-content: center;
+    width: 100%;
+  }
+
+  header #hero #fotos-local img {
+    height: min(48vw, 420px);
+    top: 0;
+  }
+
+  .alinhamento-central-div {
+    width: min(90vw, 900px);
+  }
+
+  #container-resultados,
+  #alinhamento-central-espaco,
+  #alinhamento-central-div-agendamento {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  #resultados #container-resultados #resultados-elemen {
+    width: 100%;
+  }
+
+  #espaco #texto-espaco,
+  #espaco #infos-espaco {
+    width: 100%;
+  }
+
+  #espaco video {
+    width: min(100%, 360px);
+  }
+
+  #procedimentos-sec #container .proced {
+    width: calc(50% - 10px);
+    max-width: none;
+    min-height: 155px;
+  }
+
+  #faq #div-faq .perguntas {
+    width: min(100%, 640px);
+  }
+
+  #parte-esquerda-agendamento {
+    min-width: unset;
+    width: 100%;
+  }
+
+  #parte-direita-agendamento {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  #data-horario {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #data-horario .controle-do-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    height: auto;
+    padding: 12px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 12px 16px;
+  }
+
+  nav ul li a {
+    font-size: 0.86em;
+  }
+
+  header {
+    padding: 30px 0 40px;
+  }
+
+  header #hero {
+    width: min(92vw, 100%);
+    align-items: center;
+    text-align: center;
+  }
+
+  header #hero #textos #cro {
+    margin: 0 auto 16px;
+  }
+
+  header #hero #textos h1 {
+    font-size: 2.15em;
+    margin-bottom: 16px;
+  }
+
+  header #hero #textos #descricao {
+    font-size: 1em;
+  }
+
+  header #hero #textos #botoes {
+    justify-content: center;
+  }
+
+  header #hero #textos #botoes .bt-agendar-consulta {
+    width: 100%;
+  }
+
+  header #hero #textos #avaliacoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header #hero #fotos-local img {
+    height: auto;
+    width: min(86vw, 320px);
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .alinhamento-central-div {
+    width: min(92vw, 100%);
+  }
+
+  .titulo-sub-descricao h1 {
+    font-size: 1.7em;
+  }
+
+  #procedimentos-sec #container .proced {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+  }
+
+  #resultados #container-resultados #resultados-elemen img {
+    width: min(100%, 320px);
+  }
+
+  #espaco #infos-espaco {
+    gap: 12px;
+  }
+
+  #espaco #infos-espaco .info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .card-wrapper {
+    margin: 0 0 20px;
+  }
+
+  #faq #div-faq .perguntas {
+    width: 100%;
+  }
+
+  form {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .controle-do-form input,
+  .controle-do-form select {
+    height: 42px;
+  }
+}
+
+@media (min-width: 1590px) {
+  html {
+    font-size: 17px;
+  }
+
+  .alinhamento-central-div {
+    width: 1150px;
+  }
+
+  nav {
+    height: 64px;
+    gap: 215px;
+  }
+
+  nav img {
+    width: 58px;
+  }
+
+  nav ul {
+    gap: 34px;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+  }
+
+  header {
+    padding: 60px 0px;
+  }
+
+  header #hero {
+    width: 1100px;
+    gap: 45px;
+  }
+
+  header #hero #textos #cro {
+    font-size: 0.8em;
+    padding: 9px 13px;
+  }
+
+  header #hero #textos h1 {
+    font-size: 3.4em;
+    max-width: 540px;
+  }
+
+  header #hero #textos #descricao {
+    font-size: 1.2em;
+    max-width: 590px;
+  }
+
+  .bt-agendar-consulta {
+    font-size: 0.95em;
+    padding: 8px 14px;
+    min-width: 160px;
+  }
+
+  header #hero #textos #botoes #procedimentos {
+    font-size: 1em;
+    padding: 9px 14px;
+  }
+
+  header #hero #textos #avaliacoes p {
+    font-size: 0.8em;
+  }
+
+  .titulo-sub-descricao .titulo {
+    font-size: 1.1em;
+  }
+
+  .titulo-sub-descricao h1 {
+    font-size: 2.5em;
+  }
+
+  .titulo-sub-descricao .descricao {
+    font-size: 1.2em;
+  }
+
+  header #hero #fotos-local img {
+    position: relative;
+    top: 60px;
+    height: 665px;
+  }
+
+  .section {
+    padding: 135px 0;
+  }
+
+  #sub-espaco {
+    max-width: 320px;
+  }
+
+  .titulo-sub-descricao #sub-procedimentos {
+    max-width: 640px;
+  }
+
+  #procedimentos-sec #container {
+    gap: 24px;
+  }
+
+  #procedimentos-sec #container .proced {
+    min-width: 315px;
+    height: 176px;
+    padding: 24px;
+  }
+
+  #procedimentos-sec #container .proced .material-symbols-outlined {
+    font-size: 1.8em;
+  }
+
+  #procedimentos-sec #container .proced .texto-e-desc h1 {
+    font-size: 1.4em;
+  }
+
+  #procedimentos-sec #container .proced .texto-e-desc p {
+    font-size: 1em;
+  }
+
+  #descricao-resultados {
+    max-width: 480px;
+  }
+
+  #resultados #container-resultados #resultados-elemen img {
+    width: 430px;
+  }
+
+  #espaco video {
+    width: 300px;
+  }
+
+  #espaco #infos-espaco .info {
+    width: 280px;
+    font-size: 1.08em;
+  }
+
+  #espaco #infos-espaco .info span {
+    padding: 11px;
+    font-size: 1.3em;
+  }
+
+  .card-wrapper {
+    margin: 0 80px 28px;
+  }
+
+  .card-list .card-item .card-link {
+    height: 190px;
+    padding: 22px;
+  }
+
+  .card-list .card-link .card-title {
+    font-size: 1.28rem;
+  }
+
+  #faq #titulo-sub p {
+    font-size: 1.1em;
+  }
+
+  #faq #titulo-sub h1 {
+    font-size: 2.5em;
+  }
+
+  #faq #div-faq .perguntas {
+    width: 710px;
+  }
+
+  #faq #div-faq .perguntas .div-resposta {
+    font-size: 0.88em;
   }
 
   #parte-direita-agendamento {
@@ -1089,12 +1459,22 @@ footer hr {
     gap: 20px;
   }
 
+  .controle-do-form label {
+    font-size: 0.95em;
+  }
+
+  .controle-do-form input,
+  .controle-do-form select {
+    height: 40px;
+    font-size: 0.9em;
+  }
+
   #data-horario .controle-do-form {
     width: 210px;
   }
 
   #sub-agendamento {
-    /* max-width: 530px; */
+    max-width: 460px;
   }
 }
 
