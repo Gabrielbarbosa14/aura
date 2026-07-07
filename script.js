@@ -73,7 +73,7 @@ new Swiper(".card-wrapper", {
     0: {
       slidesPerView: 1,
     },
-    765: {
+    825: {
       slidesPerView: 2,
     },
     1024: {

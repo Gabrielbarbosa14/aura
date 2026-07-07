@@ -472,6 +472,7 @@ header #hero #fotos-local img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 #sub-espaco {
@@ -529,7 +530,7 @@ header #hero #fotos-local img {
 
 #espaco #infos-espaco .info span {
   background-color: var(--cor-principal);
-  padding: 9px;
+  padding: 8px;
   border-radius: 50%;
   color: white;
   transition: 0.3s ease;
@@ -538,12 +539,12 @@ header #hero #fotos-local img {
     "wght" 400,
     "GRAD" 0,
     "opsz" 24;
+  font-size: 1.4em;
 }
 
 #espaco #infos-espaco .info p {
   font-family: "roboto", sans-serif;
   font-weight: 600;
-  font-size: 1em;
 }
 
 #sub-depoimentos {
@@ -1078,7 +1079,7 @@ footer hr {
   }
 
   header #hero {
-    width: 1100px;
+    width: 1150px;
     gap: 45px;
   }
 
@@ -1089,7 +1090,7 @@ footer hr {
 
   header #hero #textos h1 {
     font-size: 3.4em;
-    max-width: 540px;
+    max-width: 560px;
   }
 
   header #hero #textos #descricao {
@@ -1147,7 +1148,7 @@ footer hr {
   }
 
   #procedimentos-sec #container .proced {
-    min-width: 315px;
+    width: 310px;
     height: 176px;
     padding: 24px;
   }
@@ -1244,6 +1245,12 @@ footer hr {
   }
 }
 
+@media (max-width: 1244px) {
+  #procedimentos-sec #container .proced {
+    width: 250px;
+  }
+}
+
 @media (max-width: 1100px) {
   nav {
     gap: 30px;
@@ -1283,16 +1290,29 @@ footer hr {
     gap: 35px;
   }
 
-  #resultados #container-resultados #resultados-elemen img{
+  #resultados #container-resultados #resultados-elemen img {
     max-width: 340px;
   }
 
-  #espaco video{
+  #espaco video {
     width: 240px;
   }
 
+  #espaco #alinhamento-central-espaco {
+    gap: 10px;
+  }
+
+  #espaco #texto-espaco {
+    /* border: 1px solid black; */
+  }
+
+  #espaco #infos-espaco {
+    /* align-items: start; */
+    /* border: 1px solid black; */
+  }
+
   #espaco #infos-espaco .info p {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   #procedimentos-sec #container .proced {
@@ -1332,7 +1352,7 @@ footer hr {
     flex: none;
   }
 
-  form{
+  form {
     padding: 22px 28px;
     gap: 29px;
   }
@@ -1341,7 +1361,7 @@ footer hr {
     width: 50%;
   }
 
-  form button{
+  form button {
     padding: 13px 0px;
   }
 
@@ -1351,34 +1371,11 @@ footer hr {
 }
 
 @media (max-width: 933px) {
-  /* header #textos{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  header #textos #cro {
-    font-size: 0.8em;
-    margin-bottom: 10px;
-  }
-
-  header #hero #textos h1{
-    max-width: 90%;
-  }
-
-  #hero{
-    flex-direction: column;
-  }
-
-  header #hero #fotos-local img {
-    max-height: 440px;
-  } */
-
-  .alinhamento-central-div{
+  .alinhamento-central-div {
     width: 90vw;
   }
 
-  header #hero{
+  header #hero {
     width: 88vw;
   }
 
@@ -1386,7 +1383,7 @@ footer hr {
     font-size: 0.75em;
   }
 
-  header #hero #textos h1{
+  header #hero #textos h1 {
     font-size: 2.3em;
     margin-bottom: 13px;
   }
@@ -1399,47 +1396,36 @@ footer hr {
     height: 440px;
   }
 
-  #alinhamento-central-espaco{
+  /* #alinhamento-central-espaco {
     gap: 15px;
   }
 
   #espaco #infos-espaco .info span {
     padding: 12px;
     font-size: 1.8em;
-  }
-
+  } */
 }
 
 @media (max-width: 825px) {
   nav {
     height: auto;
-    padding: 12px 16px;
+    padding: 11px 20px 0px;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
-  nav ul {
-    width: 100%;
-    justify-content: center;
-    gap: 12px 16px;
-  }
-
-  nav ul li a {
-    font-size: 0.86em;
+  #bt-agendar-consulta-nav {
+    font-size: 0.85em;
   }
 
   header {
     padding: 30px 0 40px;
   }
 
-  header #hero {
-    width: min(92vw, 100%);
-    align-items: center;
-    text-align: center;
-  }
-
   header #hero #textos #cro {
-    margin: 0 auto 16px;
+    font-size: 0.68em;
+    padding: 6px 9px;
   }
 
   header #hero #textos h1 {
@@ -1451,23 +1437,13 @@ footer hr {
     font-size: 1em;
   }
 
-  header #hero #textos #botoes {
-    justify-content: center;
-  }
-
-  header #hero #textos #botoes .bt-agendar-consulta {
-    width: 100%;
-  }
-
   header #hero #textos #avaliacoes {
-    flex-direction: column;
-    align-items: center;
     gap: 8px;
   }
 
   header #hero #fotos-local img {
-    height: auto;
-    width: min(86vw, 320px);
+    top: 39.5px;
+    height: 470px;
   }
 
   .section {
@@ -1489,7 +1465,15 @@ footer hr {
   }
 
   #resultados #container-resultados #resultados-elemen img {
-    width: min(100%, 320px);
+    /* width: min(100%, 320px); */
+  }
+
+  #alinhamento-central-espaco {
+    gap: 15px;
+  }
+
+  #espaco video {
+    width: 230px;
   }
 
   #espaco #infos-espaco {
@@ -1502,7 +1486,7 @@ footer hr {
   }
 
   .card-wrapper {
-    margin: 0 0 20px;
+    /* margin: 0 0 20px; */
   }
 
   #faq #div-faq .perguntas {
