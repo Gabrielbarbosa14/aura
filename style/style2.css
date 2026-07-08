@@ -83,6 +83,11 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
+#menu-burguer,
+#menu-burguer-aberto {
+  display: none;
+}
+
 header {
   /* border: 1px solid black; */
   /* max-height: 610px; */
@@ -1049,6 +1054,11 @@ footer hr {
 }
 
 @media (min-width: 1590px) {
+  #menu-burger,
+  #menu-burguer-aberto {
+    display: none;
+  }
+
   html {
     font-size: 17px;
   }
@@ -1079,7 +1089,7 @@ footer hr {
   }
 
   header #hero {
-    width: 1150px;
+    width: 1100px;
     gap: 45px;
   }
 
@@ -1371,7 +1381,7 @@ footer hr {
 }
 
 @media (max-width: 933px) {
-  nav{
+  nav {
     height: auto;
     padding: 9px 20px 0px;
     gap: 10px;
@@ -1441,7 +1451,7 @@ footer hr {
     margin-bottom: 16px;
   }
 
-  header #hero #textos #botoes{
+  header #hero #textos #botoes {
     gap: 12px;
     flex-direction: column;
     align-items: start;
@@ -1453,11 +1463,11 @@ footer hr {
     padding: 9px 14px;
   }
 
-  #bt-agendar-consulta-hero span{
+  #bt-agendar-consulta-hero span {
     /* font-size: 1.2em; */
   }
 
-  header #hero #textos #botoes #procedimentos{
+  header #hero #textos #botoes #procedimentos {
     padding: 8px 14px;
     width: 100%;
   }
@@ -1498,7 +1508,7 @@ footer hr {
     flex-direction: column;
   }
 
-  #texto-espaco{
+  #texto-espaco {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1507,20 +1517,20 @@ footer hr {
     text-align: center;
   }
 
-  #sub-espaco{
+  #sub-espaco {
     margin: 10px auto 13px;
     max-width: none;
   }
 
-  #espaco #descricao-espaco{
+  #espaco #descricao-espaco {
     max-width: fit-content;
   }
 
-  #espaco #texto-espaco hr{
+  #espaco #texto-espaco hr {
     margin: 15px 0px;
   }
 
-  #bt-agendar-consulta-espaco{
+  #bt-agendar-consulta-espaco {
     padding: 7px 18.5px;
   }
 
@@ -1538,7 +1548,7 @@ footer hr {
     justify-content: flex-start;
   }
 
-  #faq #titulo-sub h1{
+  #faq #titulo-sub h1 {
     font-size: 1.7em;
   }
 
@@ -1557,10 +1567,8 @@ footer hr {
 }
 
 @media (max-width: 715px) {
-  nav{
-    
+  nav {
   }
-
 
   header #hero #textos h1 {
     font-size: 2em;
@@ -1575,20 +1583,20 @@ footer hr {
     height: 490px;
   }
 
-  header #hero #textos #avaliacoes{
+  header #hero #textos #avaliacoes {
     /* flex-direction: column;
     align-items: start; */
   }
 
-  header #hero #textos #avaliacoes div img{
+  header #hero #textos #avaliacoes div img {
     width: 18px;
   }
 
-  .titulo-sub-descricao h1{
+  .titulo-sub-descricao h1 {
     font-size: 1.5em;
   }
 
-  .titulo-sub-descricao .descricao{
+  .titulo-sub-descricao .descricao {
     font-size: 0.95em;
   }
 
@@ -1597,14 +1605,83 @@ footer hr {
     padding: 7px 14px;
   }
 
-  #bt-agendar-consulta-hero span{
+  #bt-agendar-consulta-hero span {
     font-size: 1.37em;
   }
 
-  header #hero #textos #botoes #procedimentos{
+  header #hero #textos #botoes #procedimentos {
     padding: 7px 14px;
     width: 100%;
   }
+}
+
+@media (max-width: 680px) {
+  nav ul {
+    gap: 12px;
+  }
+
+  nav ul li a {
+    font-size: 0.85em;
+  }
+
+  #bt-agendar-consulta-nav {
+    padding: 6px 13px;
+    font-size: 0.83em;
+  }
+}
+
+@media (max-width: 631px) {
+  nav {
+    justify-content: center;
+    gap: 360px;
+    padding-top: 12px;
+  }
+
+  nav ul,
+  nav #bt-agendar-consulta-nav {
+    display: none;
+  }
+
+  #menu-burguer {
+    display: block;
+    color: white;
+    background-color: #b5745a;
+    padding: 9px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-burguer:hover {
+    cursor: pointer;
+  }
+
+  #menu-burguer span {
+    font-size: 1.6em;
+  }
+
+  #menu-burguer-aberto {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 70;
+    width: 280px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    height: 100%;
+    background-color: #f5f5f5;
+    border: 2px solid #bb9583;
+  }
+
+  header #hero #fotos-local img {
+    height: 470px;
+    top: 45px;
+  }
+
+  /*MEXER NA SECTION RESULTADOS*/
 }
 
 @media (max-width: 600px) {
@@ -1620,4 +1697,5 @@ footer hr {
     flex-direction: column;
     align-items: flex-start;
   }
+  /*MEXER NO NAV*/
 }
