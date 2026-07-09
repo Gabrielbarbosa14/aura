@@ -40,16 +40,14 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 180px;
-  /*background-color: #ECE7DF;*/
   background-color: transparent;
   position: sticky;
   top: 0;
   bottom: 100%;
   transition: background-color 0.3s ease;
   z-index: 10;
-  /* margin-top: 5px; */
-  /* background-color: #b5927f7a; */
   background-color: var(--fundo-bege);
+  padding-top: 16px;
 }
 
 nav.sticky-nav {
@@ -1662,18 +1660,147 @@ footer hr {
     font-size: 1.6em;
   }
 
+
   #menu-burguer-aberto {
-    display: block;
+    /* display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
     position: fixed;
     right: 0;
     top: 0;
     z-index: 70;
-    width: 280px;
+    width: 70vw;
+    max-width: 270px;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
+    
     background-color: #f5f5f5;
-    border: 2px solid #bb9583;
+    padding: 30px 24px;
+  }
+
+  #sair-menu-burguer{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 41px;
+    /* border: 1px solid black; */
+  }
+
+  #sair-menu-burguer span{
+    font-size: 2.05em;
+    color: #976248;
+    /* margin-bottom: auto; */
+    cursor: pointer;
+  }
+
+  #span-alinhamento-burguer-aberto{
+    height: 100%;
+    /* border: 1px solid black; */
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #navegar-secoes{
+    /* margin: 40px 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+  }
+
+  #navegar-secoes a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* border: 1px solid black; */
+    color: black;
+    width: 100%;
+    font-size: 1.03em;
+    font-family: "roboto", sans-serif;
+  }
+
+  #navegar-secoes a .icones-diversos{
+    color: #976248;
+    font-size: 1.6em;
+    margin-right: 11.5px;
+  }
+
+  #navegar-secoes a .setinha{
+    margin-left: auto;
+    color: #976248;
+    font-size: 1.9em;
+  }
+
+  #agendar-e-whatsapp{
+    border-top: 1px solid #9762486b;
+    border-bottom: 1px solid #9762486b;
+    /* margin-bottom: 40px; */
+    padding: 45px 0px;
+    width: 100%;
+    /* margin-bottom: 40px; */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    /* border: 1px solid black; */
+  }
+
+  #bt-agendar-consulta-burguer{
+    width: 100%;
+    padding-top: 9px;
+    font-size: 1em;
+  }
+
+  #bt-whatsapp-burguer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    text-decoration: none;
+    color: #976248;
+    background-color: #ebe4e0;
+    padding: 9px 14px;
+    border-radius: 28px;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+  }
+
+  #icone-whatsapp{
+    color: #976248;
+    font-size: 1.6em;
+  }
+
+  #navegar-secoes, #agendar-e-whatsapp{
+    /* margin: auto 0px; */
+  }
+
+  #redes-sociais-menu-burguer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 1.8em;
+    /* margin-top: auto; */
+    width: 100%;
+    /* border: 1px solid black; */
   }
 
   header #hero #fotos-local img {
