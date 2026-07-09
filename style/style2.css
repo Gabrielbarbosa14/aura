@@ -1502,7 +1502,7 @@ footer hr {
   }
 
   #espaco #alinhamento-central-espaco {
-    gap: 30px;
+    gap: 48px;
     flex-direction: column;
   }
 
@@ -1537,8 +1537,7 @@ footer hr {
   }
 
   #espaco #infos-espaco {
-    gap: 40px;
-    justify-content: start;
+    flex-direction: row;
   }
 
   #espaco #infos-espaco .info {
@@ -1640,6 +1639,51 @@ footer hr {
     display: none;
   }
 
+  header #hero{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+
+  header #hero #textos #cro{
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    margin: 0px auto 20px;
+    padding: 8px 14px;
+  }
+
+  header #hero #textos #cro span{
+    font-size: 1.65em;
+  }
+
+  header #hero #textos h1 {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 2.36em;
+  }
+
+  header #hero #textos #descricao {
+    text-align: center;
+    font-size: 1.15em;
+  }
+
+  header #hero #textos #botoes .bt-agendar-consulta{
+    padding: 12px 0px;
+    font-size: 1.1em;
+  }
+
+  header #hero #textos #botoes #procedimentos {
+    padding: 12px 0px;
+    font-size: 1.1em;
+  }
+
+  header #hero #textos #avaliacoes {
+    margin: 20px auto;
+    font-size: 1.25em;
+  }
+
   #menu-burguer {
     display: block;
     color: white;
@@ -1660,33 +1704,39 @@ footer hr {
     font-size: 1.6em;
   }
 
-
   #menu-burguer-aberto {
-    /* display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 
     position: fixed;
-    right: 0;
     top: 0;
+    right: 0;
     z-index: 70;
     width: 70vw;
-    max-width: 270px;
+    max-width: 260px;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
     height: 100vh;
     height: 100dvh;
-    
+
     background-color: #f5f5f5;
     padding: 30px 24px;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.16);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
   }
 
-  #sair-menu-burguer{
+  #menu-burguer-aberto.ativo {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #sair-menu-burguer {
     width: 100%;
     display: flex;
     justify-content: end;
@@ -1694,14 +1744,14 @@ footer hr {
     /* border: 1px solid black; */
   }
 
-  #sair-menu-burguer span{
+  #sair-menu-burguer span {
     font-size: 2.05em;
     color: #976248;
     /* margin-bottom: auto; */
     cursor: pointer;
   }
 
-  #span-alinhamento-burguer-aberto{
+  #span-alinhamento-burguer-aberto {
     height: 100%;
     /* border: 1px solid black; */
     width: 100%;
@@ -1712,7 +1762,7 @@ footer hr {
     flex-direction: column;
   }
 
-  #navegar-secoes{
+  #navegar-secoes {
     /* margin: 40px 0px; */
     display: flex;
     justify-content: center;
@@ -1722,7 +1772,7 @@ footer hr {
     width: 100%;
   }
 
-  #navegar-secoes a{
+  #navegar-secoes a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -1733,26 +1783,26 @@ footer hr {
     font-family: "roboto", sans-serif;
   }
 
-  #navegar-secoes a .icones-diversos{
+  #navegar-secoes a .icones-diversos {
     color: #976248;
     font-size: 1.6em;
     margin-right: 11.5px;
   }
 
-  #navegar-secoes a .setinha{
+  #navegar-secoes a .setinha {
     margin-left: auto;
     color: #976248;
     font-size: 1.9em;
   }
 
-  #agendar-e-whatsapp{
+  #agendar-e-whatsapp {
     border-top: 1px solid #9762486b;
     border-bottom: 1px solid #9762486b;
     /* margin-bottom: 40px; */
     padding: 45px 0px;
     width: 100%;
     /* margin-bottom: 40px; */
-    
+
     display: flex;
     flex-direction: column;
     gap: 26px;
@@ -1760,13 +1810,13 @@ footer hr {
     /* border: 1px solid black; */
   }
 
-  #bt-agendar-consulta-burguer{
+  #bt-agendar-consulta-burguer {
     width: 100%;
     padding-top: 9px;
     font-size: 1em;
   }
 
-  #bt-whatsapp-burguer{
+  #bt-whatsapp-burguer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1780,38 +1830,57 @@ footer hr {
     font-family: "roboto", sans-serif;
     font-weight: 600;
     font-size: 1em;
+    transition: 0.3s ease;
   }
 
-  #icone-whatsapp{
+  #bt-whatsapp-burguer:hover {
+    background-color: #e6ddd5;
+  }
+
+  #bt-whatsapp-burguer:hover #icone-whatsapp {
+
+  }
+
+  #icone-whatsapp {
     color: #976248;
     font-size: 1.6em;
   }
 
-  #navegar-secoes, #agendar-e-whatsapp{
+  #navegar-secoes,
+  #agendar-e-whatsapp {
     /* margin: auto 0px; */
   }
 
-  #redes-sociais-menu-burguer{
+  #redes-sociais-menu-burguer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 32px;
 
-    font-size: 1.8em;
+    font-size: 1.7em;
     /* margin-top: auto; */
     width: 100%;
     /* border: 1px solid black; */
   }
 
+  #redes-sociais-menu-burguer a {
+    color: #976248;
+  }
+
   header #hero #fotos-local img {
-    height: 470px;
-    top: 45px;
+    height: 450px;
+    top: 39.8px;
   }
 
   /*MEXER NA SECTION RESULTADOS*/
 }
 
 @media (max-width: 600px) {
+  nav{
+    gap: 0px;
+    justify-content: space-around;
+  }
+
   footer {
     padding: 64px 0 40px;
   }

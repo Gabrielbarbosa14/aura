@@ -123,3 +123,15 @@ inputTelefone.addEventListener("input", (e) => {
 
   e.target.value = valor;
 });
+
+// Lógica menu hamburguer
+let btnBurguer = document.querySelector("#menu-burguer");
+let menuAberto = document.querySelector("#menu-burguer-aberto");
+let btnFecharMenu = document.querySelector("#sair-menu-burguer");
+
+const mostrarMenu = () => {
+  menuAberto.classList.toggle("ativo");
+};
+
+btnBurguer.addEventListener("click", mostrarMenu);
+btnFecharMenu.addEventListener("click", mostrarMenu);
