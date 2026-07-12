@@ -27,11 +27,17 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style/style2.css" />
+    <link rel="icon" href="./recursos/favicon/favicon.ico?v=3" type="image/x-icon" />
+    <link rel="shortcut icon" href="./recursos/favicon/favicon.ico?v=3" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./recursos/favicon/favicon-16x16.png?v=3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./recursos/favicon/favicon-32x32.png?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./recursos/favicon/apple-touch-icon.png?v=3" />
+    <link rel="manifest" href="./recursos/favicon/site.webmanifest?v=3" />
   </head>
   <body>
     <nav id="nav">
-      <a href="#fundo-rosa">
-        <img src="recursos/logo-aura-odonto.png" alt="Logo Aura odonto" />
+      <a href="#header">
+        <img src="recursos/logo2-alta-qualidade.png" alt="Logo Aura odonto" />
       </a>
       <ul>
         <li><a href="#procedimentos-sec">Procedimentos</a></li>
@@ -56,12 +62,12 @@
       <div id="sair-menu-burguer">
         <span class="material-symbols-outlined"> close </span>
       </div>
-      <span id="span-alinhamento-burguer-aberto">
+      <div id="span-alinhamento-burguer-aberto">
         <div id="navegar-secoes">
           <a href="#procedimentos-sec">
             <span class="material-symbols-outlined icones-diversos">dentistry</span>
             Procedimentos
-            <span class="material-symbols-outlined setinha">chevron_right<span>
+            <span class="material-symbols-outlined setinha">chevron_right</span>
           </a>
           <a href="#resultados">
             <span class="material-symbols-outlined icones-diversos">star</span>
@@ -83,7 +89,6 @@
             FAQ
             <span class="material-symbols-outlined setinha">chevron_right</span>
           </a>
-          </ul>
         </div>
         <div id="agendar-e-whatsapp">
           <a href="#agendamento" id="bt-agendar-consulta-burguer" class="bt-agendar-consulta">
@@ -110,15 +115,15 @@
           >
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="">
+          <a href="https://www.google.com/maps/@-9.757471,-36.6557308,3a,67.3y,44.27h,85.37t/data=!3m7!1e1!3m5!1sdsmcOIViZvrQbEbik7uAEw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.629065859233208%26panoid%3DdsmcOIViZvrQbEbik7uAEw%26yaw%3D44.26918532269488!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
             <i class="fa-solid fa-location-dot"></i>
           </a>
         </div>
-      </span>
+      </div>
     </div>
     <header id="header">
       <div id="hero">
-        <div id="textos">
+        <div id="textos" class="reveal">
           <p id="cro">
             <span class="material-symbols-outlined"> check_circle </span>Clinica
             premium - CRO 12.345
@@ -156,7 +161,7 @@
             <p><strong>4.9/5</strong> + 1200 avaliações no Google</p>
           </div>
         </div>
-        <div id="fotos-local">
+        <div id="fotos-local" class="reveal">
           <!--<p>Próximo horário <br> <strong>Hoje - 16:30</strong></p>-->
           <img src="recursos/foto-dentista1.png" alt="" />
         </div>
@@ -165,7 +170,7 @@
     <main id="main">
       <section id="procedimentos-sec" class="section">
         <div class="alinhamento-central-div">
-          <div class="titulo-sub-descricao">
+          <div class="titulo-sub-descricao reveal">
             <p class="titulo">PROCEDIMENTOS</p>
             <h1 id="sub-procedimentos">
               Tratamentos pensados para o seu sorriso
@@ -176,7 +181,7 @@
             </p>
           </div>
           <div id="container">
-            <div class="proced">
+            <div class="proced reveal">
               <span class="material-symbols-outlined"> Wand_Stars </span>
               <span class="texto-e-desc">
                 <h1>Clareamento</h1>
@@ -186,7 +191,7 @@
                 </p>
               </span>
             </div>
-            <div class="proced">
+            <div class="proced reveal">
               <span class="material-symbols-outlined">
                 Sentiment_Satisfied
               </span>
@@ -198,7 +203,7 @@
                 </p>
               </span>
             </div>
-            <div class="proced">
+            <div class="proced reveal">
               <span class="material-symbols-outlined"> build </span>
               <span class="texto-e-desc">
                 <h1>Implantes</h1>
@@ -208,14 +213,14 @@
                 </p>
               </span>
             </div>
-            <div class="proced">
+            <div class="proced reveal">
               <span class="material-symbols-outlined"> Water_Drops </span>
               <span class="texto-e-desc">
                 <h1>Limpeza</h1>
                 <p>Profilaxia profissional para saúde bucal e prevenção.</p>
               </span>
             </div>
-            <div class="proced">
+            <div class="proced reveal">
               <span class="material-symbols-outlined"> Diamond_Shine </span>
               <span class="texto-e-desc">
                 <h1>Lentes Dentais</h1>
@@ -225,7 +230,7 @@
                 </p>
               </span>
             </div>
-            <div class="proced">
+            <div class="proced reveal">
               <span class="material-symbols-outlined"> Stethoscope </span>
               <span class="texto-e-desc">
                 <h1>Check-up Geral</h1>
@@ -239,7 +244,7 @@
       </section>
       <section id="resultados" class="section-fundo-rosa section">
         <div id="container-resultados" class="alinhamento-central-div">
-          <div id="lado-esquerdo">
+          <div id="lado-esquerdo" class="reveal">
             <div class="titulo-sub-descricao">
               <p class="titulo">RESULTADOS</p>
               <h1 id="sub-resultados">
@@ -256,7 +261,7 @@
               <span class="material-symbols-outlined"> calendar_month </span>
             </a>
           </div>
-          <div id="resultados-elemen" class="elemen">
+          <div id="resultados-elemen" class="elemen reveal">
             <img src="recursos/img1.jpg" alt="" class="axd-img img0" />
             <img src="recursos/img2.jpg" alt="" class="axd-img" />
             <img src="recursos/img3.jpg" alt="" class="axd-img" />
@@ -277,8 +282,8 @@
       <section id="espaco" class="section">
         <div id="alinhamento-central-espaco" class="alinhamento-central-div">
           <div id="div-para-mq">
-            <div id="texto-espaco">
-              <div class="titulo-sub-descricao">
+            <div id="texto-espaco" class="reveal">
+              <div class="titulo-sub-descricao reveal">
                 <p class="titulo">NOSSO ESPAÇO</p>
                 <h1 id="sub-espaco">Um espaço feito para o seu bem-estar</h1>
                 <p id="descricao-espaco" class="descricao">
@@ -296,7 +301,7 @@
                 <span class="material-symbols-outlined"> calendar_month </span>
               </a>
             </div>
-            <video src="recursos/video-clinica.mp4" controls></video>
+            <video src="recursos/video-clinica.mp4" controls class="reveal"></video>
           </div>
           <div id="infos-espaco">
             <div class="info">
@@ -603,12 +608,12 @@
       </section>
       <section id="faq" class="section">
         <div id="alinhamento-central-faq" class="alinhamento-central-div">
-          <div id="titulo-sub">
+          <div id="titulo-sub" class="reveal">
             <p id="proced-p">FAQ</p>
             <h1>Perguntas Frequentes.</h1>
           </div>
           <div id="div-faq">
-            <div id="pergunta1" class="perguntas ativa">
+            <div id="pergunta1" class="perguntas ativa reveal">
               <div class="pergunta-mais">
                 <h1>Vocês atendem por convênio?</h1>
                 <span class="material-symbols-outlined"> add_2 </span>
@@ -677,7 +682,7 @@
           class="alinhamento-central-div"
           id="alinhamento-central-div-agendamento"
         >
-          <div id="parte-esquerda-agendamento">
+          <div id="parte-esquerda-agendamento" class="reveal">
             <div class="titulo-sub-descricao">
               <p id="titulo-agendamento" class="titulo">AGENDAMENTO</p>
               <h1 id="sub-agendamento">
@@ -703,7 +708,7 @@
               </p>
             </div>
           </div>
-          <div id="parte-direita-agendamento">
+          <div id="parte-direita-agendamento" class="reveal">
             <form action="#" method="post">
               <div class="controle-do-form">
                 <label for="nome">NOME COMPLETO</label>
@@ -812,7 +817,7 @@
               >
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
             </div>

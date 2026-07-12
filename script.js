@@ -1,6 +1,55 @@
 //Lógica do nav
 const nav = document.querySelector("nav");
 
+const scrollParaSecao = (elementoAlvo) => {
+  if (!elementoAlvo) return;
+
+  const topo = elementoAlvo.getBoundingClientRect().top + window.pageYOffset - 30;
+
+  window.scrollTo({
+    top: topo,
+    behavior: "smooth",
+  });
+};
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const destino = link.getAttribute("href");
+
+    if (!destino || destino === "#") return;
+
+    const secaoAlvo = document.querySelector(destino);
+
+    if (!secaoAlvo) return;
+
+    event.preventDefault();
+    scrollParaSecao(secaoAlvo);
+    history.pushState(null, "", destino);
+
+    if (menuAberto && menuAberto.classList.contains("ativo")) {
+      menuAberto.classList.remove("ativo");
+    }
+  });
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+    rootMargin: "0px 0px -40px 0px",
+  }
+);
+
+document.querySelectorAll(".reveal").forEach((element) => {
+  observer.observe(element);
+});
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     nav.classList.add("sticky-nav");
@@ -127,7 +176,7 @@ inputTelefone.addEventListener("input", (e) => {
 // Lógica menu hamburguer
 let btnBurguer = document.querySelector("#menu-burguer");
 let menuAberto = document.querySelector("#menu-burguer-aberto");
-let btnFecharMenu = document.querySelector("#sair-menu-burguer");
+let btnFecharMenu = document.querySelector("#sair-menu-burguer span");
 
 const mostrarMenu = () => {
   menuAberto.classList.toggle("ativo");

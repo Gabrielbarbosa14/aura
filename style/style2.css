@@ -25,6 +25,34 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
 #fundo-rosa {
   /* border: 1px solid black; */
   width: 100%;
@@ -34,7 +62,6 @@
 nav {
   /* border: 1px solid black; */
   width: 100%;
-  height: 55px;
 
   display: flex;
   justify-content: center;
@@ -47,7 +74,7 @@ nav {
   transition: background-color 0.3s ease;
   z-index: 70;
   background-color: var(--fundo-bege);
-  padding-top: 16px;
+  padding: 10px 0px;
 }
 
 nav.sticky-nav {
@@ -179,7 +206,7 @@ header #hero #textos #botoes {
   flex-shrink: 0;
 
   background-color: var(--cor-principal);
-  padding: 7px 14px;
+  padding: 7px 16px;
   border-radius: 28px;
   transition: background-color 0.3s ease;
   font-size: 0.9em;
@@ -203,7 +230,7 @@ header #hero #textos #botoes {
 
 header #hero #textos #botoes #procedimentos {
   background-color: #fff;
-  padding: 8px 11px;
+  padding: 8px 12.5px;
   border-radius: 28px;
   transition: background-color 0.3s ease;
   font-size: 0.9em;
@@ -222,7 +249,7 @@ header #hero #textos #avaliacoes {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 18px;
+  gap: 8px;
   margin-top: 20px;
   /*border: 1px solid black;*/
 }
@@ -1044,7 +1071,6 @@ footer hr {
   }
 
   nav {
-    height: 64px;
     gap: 215px;
   }
 
@@ -1239,8 +1265,8 @@ footer hr {
 
 @media (max-width: 1100px) {
   nav {
-    gap: 30px;
-    padding: 0 32px;
+    gap: 0px;
+    padding: 10px 60px;
     justify-content: space-between;
   }
 
@@ -1359,7 +1385,7 @@ footer hr {
 @media (max-width: 933px) {
   nav {
     height: auto;
-    padding: 9px 20px 0px;
+    padding: 10px 0px;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1403,7 +1429,7 @@ footer hr {
 @media (max-width: 825px) {
   nav {
     height: auto;
-    padding: 9px 20px 0px;
+    padding: 12px 0px;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1563,9 +1589,6 @@ footer hr {
 }
 
 @media (max-width: 715px) {
-  nav {
-  }
-
   header #hero #textos h1 {
     font-size: 2em;
     margin-bottom: 16px;
@@ -1654,7 +1677,7 @@ footer hr {
 @media (max-width: 642px){
   #container-resultados{
     flex-direction: column;
-    gap: 30px;
+    gap: 65px;
   }
 
   #resultados #container-resultados #resultados-elemen #buttons{
@@ -1674,7 +1697,6 @@ footer hr {
   nav {
     justify-content: center;
     gap: 360px;
-    padding-top: 13px;
   }
 
   nav ul,
@@ -1932,6 +1954,14 @@ footer hr {
 
   #espaco #alinhamento-central-espaco {
     gap: 50px;
+  }
+
+  #espaco #infos-espaco .info p{
+    font-size: 0.85em;
+  }
+
+  form button{
+    font-size: 1em;
   }
 
   footer {
