@@ -15,10 +15,6 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aura Odonto</title>
@@ -37,7 +33,7 @@
   <body>
     <nav id="nav">
       <a href="#header">
-        <img src="recursos/logo2-alta-qualidade.png" alt="Logo Aura odonto" />
+        <img src="recursos/logo2-alta-qualidade.png" alt="Aura Odonto" />
       </a>
       <ul>
         <li><a href="#procedimentos-sec">Procedimentos</a></li>
@@ -55,12 +51,12 @@
         <span class="material-symbols-outlined"> calendar_month </span>
       </a>
       <div id="menu-burguer">
-        <span id="icone-burguer" class="material-symbols-outlined"> menu </span>
+        <span id="icone-burguer" class="material-symbols-outlined" aria-hidden="true"> menu </span>
       </div>
     </nav>
     <div id="menu-burguer-aberto">
       <div id="sair-menu-burguer">
-        <span class="material-symbols-outlined"> close </span>
+        <span class="material-symbols-outlined" role="button" tabindex="0" aria-label="Fechar menu"> close </span>
       </div>
       <div id="span-alinhamento-burguer-aberto">
         <div id="navegar-secoes">
@@ -105,6 +101,7 @@
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.instagram.com/auraodonto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            aria-label="Instagram"
           >
             <i class="fa-brands fa-instagram"></i>
           </a>
@@ -112,10 +109,16 @@
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.facebook.com/profile.php?id=100075843914085&locale=pt_BR"
+            aria-label="Facebook"
           >
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://www.google.com/maps/@-9.757471,-36.6557308,3a,67.3y,44.27h,85.37t/data=!3m7!1e1!3m5!1sdsmcOIViZvrQbEbik7uAEw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.629065859233208%26panoid%3DdsmcOIViZvrQbEbik7uAEw%26yaw%3D44.26918532269488!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.google.com/maps/@-9.757471,-36.6557308,3a,67.3y,44.27h,85.37t/data=!3m7!1e1!3m5!1sdsmcOIViZvrQbEbik7uAEw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.629065859233208%26panoid%3DdsmcOIViZvrQbEbik7uAEw%26yaw%3D44.26918532269488!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
+            aria-label="Ver localização no Google Maps"
+          >
             <i class="fa-solid fa-location-dot"></i>
           </a>
         </div>
@@ -162,8 +165,7 @@
           </div>
         </div>
         <div id="fotos-local" class="reveal">
-          <!--<p>Próximo horário <br> <strong>Hoje - 16:30</strong></p>-->
-          <img src="recursos/foto-dentista1.png" alt="" />
+          <img src="recursos/foto-dentista1.png" alt="Dentista da Aura Odonto atendendo paciente" />
         </div>
       </div>
     </header>
@@ -262,18 +264,18 @@
             </a>
           </div>
           <div id="resultados-elemen" class="elemen reveal">
-            <img src="recursos/img1.jpg" alt="" class="axd-img img0" />
-            <img src="recursos/img2.jpg" alt="" class="axd-img" />
-            <img src="recursos/img3.jpg" alt="" class="axd-img" />
-            <img src="recursos/img4--.png" alt="" class="axd-img" />
-            <img src="recursos/img5.jpg" alt="" class="axd-img" />
-            <img src="recursos/img6.jpg" alt="" class="axd-img" />
+            <img src="recursos/img1.jpg" alt="Resultado de tratamento odontológico realizado na Aura Odonto" class="axd-img img0" />
+            <img src="recursos/img2.jpg" alt="Resultado de tratamento odontológico realizado na Aura Odonto" class="axd-img" />
+            <img src="recursos/img3.jpg" alt="Resultado de tratamento odontológico realizado na Aura Odonto" class="axd-img" />
+            <img src="recursos/img4--.png" alt="Resultado de tratamento odontológico realizado na Aura Odonto" class="axd-img" />
+            <img src="recursos/img5.jpg" alt="Resultado de tratamento odontológico realizado na Aura Odonto" class="axd-img" />
+            <img src="recursos/img6.jpg" alt="Resultado de tratamento odontológico realizado na Aura Odonto" class="axd-img" />
             <div id="buttons">
-              <button id="anterior">
-                <span class="material-symbols-outlined"> chevron_left </span>
+              <button id="anterior" type="button" aria-label="Ver resultado anterior">
+                <span class="material-symbols-outlined" aria-hidden="true"> chevron_left </span>
               </button>
-              <button id="proximo">
-                <span class="material-symbols-outlined"> chevron_right </span>
+              <button id="proximo" type="button" aria-label="Ver próximo resultado">
+                <span class="material-symbols-outlined" aria-hidden="true"> chevron_right </span>
               </button>
             </div>
           </div>
@@ -305,15 +307,15 @@
           </div>
           <div id="infos-espaco">
             <div class="info">
-              <span class="material-symbols-outlined"> verified_user </span>
+              <span class="material-symbols-outlined" aria-hidden="true"> verified_user </span>
               <p>Ambiente seguro e higienizado</p>
             </div>
             <div class="info">
-              <span class="material-symbols-outlined"> medical_services </span>
+              <span class="material-symbols-outlined" aria-hidden="true"> medical_services </span>
               <p>Consultórios modernos e equipados</p>
             </div>
             <div class="info">
-              <span class="material-symbols-outlined"> favorite </span>
+              <span class="material-symbols-outlined" aria-hidden="true"> favorite </span>
               <p>Pensado para o seu conforto</p>
             </div>
           </div>
@@ -332,31 +334,11 @@
                   <a href="" class="card-link">
                     <div class="avaliacao">
                       <div class="estrelas-avaliacao">
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
                       </div>
                       <p class="badge">
                         "Lorem ipsum dolor sit amet consectetur adipisicing
@@ -364,11 +346,7 @@
                       </p>
                     </div>
                     <div class="pessoa">
-                      <img
-                        src="recursos/cinza-foto-temporaria.webp"
-                        alt=""
-                        class="foto-pessoa"
-                      />
+                      <img src="recursos/cinza-foto-temporaria.webp" alt="" class="foto-pessoa" />
                       <h2 class="card-title">Cliente 1</h2>
                     </div>
                   </a>
@@ -377,31 +355,11 @@
                   <a href="" class="card-link">
                     <div class="avaliacao">
                       <div class="estrelas-avaliacao">
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
                       </div>
                       <p class="badge">
                         "Lorem ipsum dolor sit amet consectetur adipisicing
@@ -409,11 +367,7 @@
                       </p>
                     </div>
                     <div class="pessoa">
-                      <img
-                        src="recursos/cinza-foto-temporaria.webp"
-                        alt=""
-                        class="foto-pessoa"
-                      />
+                      <img src="recursos/cinza-foto-temporaria.webp" alt="" class="foto-pessoa" />
                       <h2 class="card-title">Cliente 2</h2>
                     </div>
                   </a>
@@ -422,31 +376,11 @@
                   <a href="" class="card-link">
                     <div class="avaliacao">
                       <div class="estrelas-avaliacao">
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
                       </div>
                       <p class="badge">
                         "Lorem ipsum dolor sit amet consectetur adipisicing
@@ -454,11 +388,7 @@
                       </p>
                     </div>
                     <div class="pessoa">
-                      <img
-                        src="recursos/cinza-foto-temporaria.webp"
-                        alt=""
-                        class="foto-pessoa"
-                      />
+                      <img src="recursos/cinza-foto-temporaria.webp" alt="" class="foto-pessoa" />
                       <h2 class="card-title">Cliente 3</h2>
                     </div>
                   </a>
@@ -467,31 +397,11 @@
                   <a href="" class="card-link">
                     <div class="avaliacao">
                       <div class="estrelas-avaliacao">
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
                       </div>
                       <p class="badge">
                         "Lorem ipsum dolor sit amet consectetur adipisicing
@@ -499,11 +409,7 @@
                       </p>
                     </div>
                     <div class="pessoa">
-                      <img
-                        src="recursos/cinza-foto-temporaria.webp"
-                        alt=""
-                        class="foto-pessoa"
-                      />
+                      <img src="recursos/cinza-foto-temporaria.webp" alt="" class="foto-pessoa" />
                       <h2 class="card-title">Cliente 4</h2>
                     </div>
                   </a>
@@ -512,31 +418,11 @@
                   <a href="" class="card-link">
                     <div class="avaliacao">
                       <div class="estrelas-avaliacao">
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
                       </div>
                       <p class="badge">
                         "Lorem ipsum dolor sit amet consectetur adipisicing
@@ -544,11 +430,7 @@
                       </p>
                     </div>
                     <div class="pessoa">
-                      <img
-                        src="recursos/cinza-foto-temporaria.webp"
-                        alt=""
-                        class="foto-pessoa"
-                      />
+                      <img src="recursos/cinza-foto-temporaria.webp" alt="" class="foto-pessoa" />
                       <h2 class="card-title">Cliente 5</h2>
                     </div>
                   </a>
@@ -557,31 +439,11 @@
                   <a href="" class="card-link">
                     <div class="avaliacao">
                       <div class="estrelas-avaliacao">
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
-                        <img
-                          src="recursos/estrela-avaliação.png"
-                          alt=""
-                          class="card-image"
-                        />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
+                        <img src="recursos/estrela-avaliação.png" alt="" class="card-image" />
                       </div>
                       <p class="badge">
                         "Lorem ipsum dolor sit amet consectetur adipisicing
@@ -589,11 +451,7 @@
                       </p>
                     </div>
                     <div class="pessoa">
-                      <img
-                        src="recursos/cinza-foto-temporaria.webp"
-                        alt=""
-                        class="foto-pessoa"
-                      />
+                      <img src="recursos/cinza-foto-temporaria.webp" alt="" class="foto-pessoa" />
                       <h2 class="card-title">Cliente 6</h2>
                     </div>
                   </a>
@@ -616,7 +474,7 @@
             <div id="pergunta1" class="perguntas ativa reveal">
               <div class="pergunta-mais">
                 <h1>Vocês atendem por convênio?</h1>
-                <span class="material-symbols-outlined"> add_2 </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> add_2 </span>
               </div>
               <div class="div-resposta">
                 <p>
@@ -628,7 +486,7 @@
             <div class="perguntas">
               <div class="pergunta-mais">
                 <h1>Quanto tempo dura um clareamento?</h1>
-                <span class="material-symbols-outlined"> add_2 </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> add_2 </span>
               </div>
               <div class="div-resposta">
                 <p>
@@ -640,7 +498,7 @@
             <div class="perguntas">
               <div class="pergunta-mais">
                 <h1>Lentes de contato dental machucam?</h1>
-                <span class="material-symbols-outlined"> add_2 </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> add_2 </span>
               </div>
               <div class="div-resposta">
                 <p>
@@ -652,7 +510,7 @@
             <div class="perguntas">
               <div class="pergunta-mais">
                 <h1>Como é a primeira consulta?</h1>
-                <span class="material-symbols-outlined"> add_2 </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> add_2 </span>
               </div>
               <div class="div-resposta">
                 <p>
@@ -665,7 +523,7 @@
             <div class="perguntas">
               <div class="pergunta-mais">
                 <h1>Vocês atendem crianças?</h1>
-                <span class="material-symbols-outlined"> add_2 </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> add_2 </span>
               </div>
               <div class="div-resposta">
                 <p>
@@ -695,15 +553,15 @@
             </div>
             <div id="checklist">
               <p class="checklist-p">
-                <span class="material-symbols-outlined"> check </span> Sem
+                <span class="material-symbols-outlined" aria-hidden="true"> check </span> Sem
                 Compromisso
               </p>
               <p class="checklist-p">
-                <span class="material-symbols-outlined"> check </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> check </span>
                 Atendimento humanizado
               </p>
               <p class="checklist-p">
-                <span class="material-symbols-outlined"> check </span>
+                <span class="material-symbols-outlined" aria-hidden="true"> check </span>
                 Resposta em até 30 min
               </p>
             </div>
@@ -758,7 +616,7 @@
                 </div>
               </div>
               <button type="submit">
-                Confirmar agendamento<span class="material-symbols-outlined">
+                Confirmar agendamento<span class="material-symbols-outlined" aria-hidden="true">
                   calendar_month
                 </span>
               </button>
@@ -772,7 +630,7 @@
         <div id="parte-cima-footer">
           <div class="bloco-footer-div bloco-footer-div1">
             <div id="div-topo-bloco-div1">
-              <img src="recursos/logo-aura-odonto.png" alt="" />
+              <img src="recursos/logo-aura-odonto.png" alt="Aura Odonto" />
               <h1>Aura Odonto</h1>
             </div>
             <p>
@@ -783,11 +641,11 @@
           <div class="bloco-footer-div bloco-footer-div2">
             <h1>Horários</h1>
             <p>
-              <span class="material-symbols-outlined"> schedule </span> Seg–Sex
+              <span class="material-symbols-outlined" aria-hidden="true"> schedule </span> Seg–Sex
               · 08h às 20h
             </p>
             <p>
-              <span class="material-symbols-outlined"> schedule </span>Sábado ·
+              <span class="material-symbols-outlined" aria-hidden="true"> schedule </span>Sábado ·
               09h às 14h
             </p>
           </div>
@@ -795,7 +653,7 @@
             <h1>Localização</h1>
             <div id="localizacao-div3">
               <p>
-                <span class="material-symbols-outlined"> pin_drop </span>Rua
+                <span class="material-symbols-outlined" aria-hidden="true"> pin_drop </span>Rua
                 Estudante José de Oliveira Leite, 771 - Ouro Preto, Arapiraca
               </p>
             </div>
@@ -807,6 +665,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/auraodonto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                aria-label="Instagram"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>
@@ -814,10 +673,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/profile.php?id=100075843914085&locale=pt_BR"
+                aria-label="Facebook"
               >
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="">
+              <a href="" aria-label="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
             </div>
