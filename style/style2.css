@@ -1876,6 +1876,7 @@ footer hr {
   #data-horario {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
   }
 
   #data-horario .controle-do-form {
