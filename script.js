@@ -11,6 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", () => {
     if (menuAberto?.classList.contains("ativo")) {
       menuAberto.classList.remove("ativo");
+      document.body.classList.remove("menu-mobile-aberto");
     }
   });
 });
@@ -152,6 +153,10 @@ const btnFecharMenu = document.querySelector("#sair-menu-burguer span");
 
 const alternarMenu = () => {
   menuAberto?.classList.toggle("ativo");
+  // Sem isso, a página de fundo continua rolando com o menu aberto,
+  // o que faz a barra do navegador esconder/aparecer e o menu "cortar"
+  // embaixo até o layout se ajustar de novo.
+  document.body.classList.toggle("menu-mobile-aberto");
 };
 
 btnBurguer?.addEventListener("click", alternarMenu);

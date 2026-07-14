@@ -24,6 +24,10 @@
   box-sizing: border-box;
 }
 
+body.menu-mobile-aberto {
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
