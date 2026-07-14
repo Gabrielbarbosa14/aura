@@ -103,7 +103,8 @@ nav ul li a:hover {
 }
 
 #menu-burguer,
-#menu-burguer-aberto {
+#menu-burguer-aberto,
+#menu-overlay {
   display: none;
 }
 
@@ -1685,6 +1686,22 @@ footer hr {
     font-size: 1.6em;
   }
 
+  #menu-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 71;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  #menu-overlay.ativo {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   #menu-burguer-aberto {
     display: flex;
     justify-content: space-between;
@@ -1695,7 +1712,7 @@ footer hr {
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 70;
+    z-index: 72;
     width: 70vw;
     max-width: 260px;
     border-top-left-radius: 18px;

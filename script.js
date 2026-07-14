@@ -6,6 +6,7 @@
    ========================================================= */
 const nav = document.querySelector("nav");
 const menuAberto = document.querySelector("#menu-burguer-aberto");
+const menuOverlay = document.querySelector("#menu-overlay");
 
 // Guarda de onde o usuário estava rolando, pra devolver a posição certa
 // depois de fechar o menu.
@@ -15,6 +16,7 @@ const abrirMenuMobile = () => {
   posicaoScrollAntesDoMenu = window.scrollY;
 
   menuAberto?.classList.add("ativo");
+  menuOverlay?.classList.add("ativo");
   document.body.classList.add("menu-mobile-aberto");
 
   // "overflow: hidden" sozinho não trava o scroll por toque no iOS Safari.
@@ -27,6 +29,7 @@ const abrirMenuMobile = () => {
 
 const fecharMenuMobile = () => {
   menuAberto?.classList.remove("ativo");
+  menuOverlay?.classList.remove("ativo");
   document.body.classList.remove("menu-mobile-aberto");
 
   document.body.style.position = "";
@@ -34,6 +37,9 @@ const fecharMenuMobile = () => {
   document.body.style.width = "";
   window.scrollTo(0, posicaoScrollAntesDoMenu);
 };
+
+// Toca fora do menu (no fundo escurecido) = fecha o menu
+menuOverlay?.addEventListener("click", fecharMenuMobile);
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", () => {
