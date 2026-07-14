@@ -158,9 +158,27 @@ btnBurguer?.addEventListener("click", alternarMenu);
 btnFecharMenu?.addEventListener("click", alternarMenu);
 
 /* =========================================================
-   Enviar mensagem para a clínica pelo WhatsApp
+   WHATSAPP DA CLÍNICA
+   Número usado tanto pelos botões fixos ("Falar no WhatsApp")
+   quanto pelo envio do formulário de agendamento — fica num
+   lugar só pra não repetir o número em três lugares diferentes.
    ========================================================= */
+const NUMERO_WHATSAPP_CLINICA = "5582996389256";
 
+// Conecta os botões estáticos "Falar no WhatsApp" (menu mobile e rodapé)
+const linkWhatsappPadrao = `https://wa.me/${NUMERO_WHATSAPP_CLINICA}?text=${encodeURIComponent(
+  "Olá, gostaria de saber mais sobre a Aura Odonto.",
+)}`;
+
+document
+  .querySelectorAll("#bt-whatsapp-burguer, #bt-whatsapp-footer")
+  .forEach((botao) => {
+    botao.href = linkWhatsappPadrao;
+    botao.target = "_blank";
+    botao.rel = "noopener noreferrer";
+  });
+
+// Envia os dados do formulário de agendamento pelo WhatsApp
 const formAgendamento = document.querySelector("#agendamento form");
 
 const enviarMensagem = (evento) => {
@@ -172,8 +190,6 @@ const enviarMensagem = (evento) => {
   const data = document.querySelector("#data")?.value || "";
   const horario = document.querySelector("#horario")?.value || "";
 
-  const numeroClinica = "5582996389256";
-
   const texto = [
     "Olá, gostaria de agendar uma consulta.",
     `Nome: ${nome}`,
@@ -183,8 +199,16 @@ const enviarMensagem = (evento) => {
     `Horário: ${horario}`,
   ].join("\n");
 
-  const link = `https://wa.me/${numeroClinica}?text=${encodeURIComponent(texto)}`;
-  window.open(link, "_blank");
+  const link = `https://wa.me/${NUMERO_WHATSAPP_CLINICA}?text=${encodeURIComponent(texto)}`;
+  const janela = window.open(link, "_blank");
+
+  // Se o navegador bloquear o pop-up, abre na mesma aba como alternativa
+  if (!janela) {
+    window.location.href = link;
+    return;
+  }
+
+  formAgendamento.reset();
 };
 
 formAgendamento?.addEventListener("submit", enviarMensagem);
