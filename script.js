@@ -7,11 +7,38 @@
 const nav = document.querySelector("nav");
 const menuAberto = document.querySelector("#menu-burguer-aberto");
 
+// Guarda de onde o usuário estava rolando, pra devolver a posição certa
+// depois de fechar o menu.
+let posicaoScrollAntesDoMenu = 0;
+
+const abrirMenuMobile = () => {
+  posicaoScrollAntesDoMenu = window.scrollY;
+
+  menuAberto?.classList.add("ativo");
+  document.body.classList.add("menu-mobile-aberto");
+
+  // "overflow: hidden" sozinho não trava o scroll por toque no iOS Safari.
+  // Tirar o body do fluxo normal com position:fixed impede fisicamente
+  // o dedo de rolar a página por trás do menu, em qualquer navegador.
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${posicaoScrollAntesDoMenu}px`;
+  document.body.style.width = "100%";
+};
+
+const fecharMenuMobile = () => {
+  menuAberto?.classList.remove("ativo");
+  document.body.classList.remove("menu-mobile-aberto");
+
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  window.scrollTo(0, posicaoScrollAntesDoMenu);
+};
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", () => {
     if (menuAberto?.classList.contains("ativo")) {
-      menuAberto.classList.remove("ativo");
-      document.body.classList.remove("menu-mobile-aberto");
+      fecharMenuMobile();
     }
   });
 });
@@ -152,11 +179,12 @@ const btnBurguer = document.querySelector("#menu-burguer");
 const btnFecharMenu = document.querySelector("#sair-menu-burguer span");
 
 const alternarMenu = () => {
-  menuAberto?.classList.toggle("ativo");
-  // Sem isso, a página de fundo continua rolando com o menu aberto,
-  // o que faz a barra do navegador esconder/aparecer e o menu "cortar"
-  // embaixo até o layout se ajustar de novo.
-  document.body.classList.toggle("menu-mobile-aberto");
+  const estaAberto = menuAberto?.classList.contains("ativo");
+  if (estaAberto) {
+    fecharMenuMobile();
+  } else {
+    abrirMenuMobile();
+  }
 };
 
 btnBurguer?.addEventListener("click", alternarMenu);
