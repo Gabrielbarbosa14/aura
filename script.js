@@ -35,7 +35,10 @@ const fecharMenuMobile = () => {
   document.body.style.position = "";
   document.body.style.top = "";
   document.body.style.width = "";
-  window.scrollTo(0, posicaoScrollAntesDoMenu);
+  // "instant" ignora o scroll-behavior:smooth do CSS aqui de propósito:
+  // essa restauração é só desfazer a "ilusão" do travamento de scroll,
+  // o usuário nunca saiu desse ponto de verdade, então não deve animar.
+  window.scrollTo({ top: posicaoScrollAntesDoMenu, left: 0, behavior: "instant" });
 };
 
 // Toca fora do menu (no fundo escurecido) = fecha o menu
