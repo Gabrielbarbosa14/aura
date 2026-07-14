@@ -1690,13 +1690,12 @@ footer hr {
     position: fixed;
     top: 0;
     right: 0;
+    bottom: 0;
     z-index: 70;
     width: 70vw;
     max-width: 260px;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
-    height: 100vh; /* fallback para navegadores sem suporte a svh */
-    height: 100svh; /* altura estável: não "pula" durante o scroll, ao contrário de dvh */
 
     background-color: #f5f5f5;
     padding: 30px 24px;
