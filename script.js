@@ -90,6 +90,12 @@ const imagensResultado = document.querySelectorAll(".axd-img");
 
 let indiceAtual = 0;
 
+// Precarrega todas as imagens para evitar delay
+imagensResultado.forEach((img) => {
+  const novaImg = new Image();
+  novaImg.src = img.src;
+});
+
 const trocarSlide = (direcao) => {
   const imagemAtual = imagensResultado[indiceAtual];
   imagemAtual.classList.remove("img0");
@@ -99,12 +105,6 @@ const trocarSlide = (direcao) => {
 
   const proximaImagem = imagensResultado[indiceAtual];
   proximaImagem.classList.add("img0");
-
-  // Reinicia a transição de opacidade a cada troca
-  proximaImagem.style.opacity = "0";
-  setTimeout(() => {
-    proximaImagem.style.opacity = "1";
-  }, 10);
 };
 
 botaoProximo?.addEventListener("click", () => trocarSlide(1));

@@ -30,11 +30,11 @@ body.menu-mobile-aberto {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 20px;
 }
 
 section[id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 20px;
 }
 
 .reveal {
@@ -417,7 +417,7 @@ header #hero #fotos-local img {
 #resultados #container-resultados #resultados-elemen .img0 {
   display: block;
   opacity: 1;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 #resultados #container-resultados #resultados-elemen #buttons {
@@ -529,8 +529,13 @@ header #hero #fotos-local img {
 
 .card-wrapper {
   margin: 0 60px 28px;
-  padding: 20px 10px;
-  overflow: hidden;
+  padding: 20px 10px 30px;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.container.swiper {
+  position: relative;
 }
 
 .card-list .card-item {
@@ -1898,5 +1903,11 @@ footer hr {
   #ultimos-textos-footer-div {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px){
+  #agendar-e-whatsapp {
+    padding: 20px 0px;
   }
 }
