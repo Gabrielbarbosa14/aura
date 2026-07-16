@@ -18,6 +18,11 @@
   --icone-fundo: #ecddd6;
 }
 
+/* Garante que o conteúdo apareça com fontes fallback enquanto carrega */
+html {
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
