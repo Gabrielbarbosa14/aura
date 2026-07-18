@@ -1916,3 +1916,159 @@ footer hr {
     padding: 20px 0px;
   }
 }
+
+/* =========================================================
+   ABAIXO: proposta de "ver depoimento completo" (COMENTADA)
+   ---------------------------------------------------------
+   Nada aqui está ativo. É a referência do que foi implementado
+   antes: truncar o comentário em 3 linhas e abrir um modal com
+   o texto completo, foto e nome do cliente.
+   ========================================================= */
+
+/*
+.card-list .card-item .card-link {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-list .card-item .card-link:focus-visible {
+  outline: 2px solid var(--cor-principal);
+  outline-offset: 2px;
+}
+
+.card-list .card-link .badge {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.card-list .card-item .card-link .ver-mais-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--cor-principal);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.card-list .card-item .card-link .ver-mais-btn:hover {
+  color: var(--cor-acento);
+}
+
+#modal-depoimento-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 20, 15, 0.55);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+#modal-depoimento-overlay.ativo {
+  display: flex;
+}
+
+#modal-depoimento {
+  position: relative;
+  background: var(--fundo-neutro);
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 32px 28px 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: modal-depoimento-entrar 0.25s ease;
+}
+
+@keyframes modal-depoimento-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#modal-depoimento-fechar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--icone-fundo);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--cor-acento);
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+#modal-depoimento-fechar:hover {
+  background: var(--cor-principal);
+  color: #fff;
+}
+
+#modal-depoimento-estrelas {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+#modal-depoimento-estrelas img {
+  width: 22px;
+}
+
+#modal-depoimento-texto {
+  color: black;
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  white-space: pre-line;
+}
+
+#modal-depoimento-pessoa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#modal-depoimento-pessoa img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#modal-depoimento-pessoa h2 {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 600;
+}
+
+body.modal-depoimento-aberto {
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  #modal-depoimento {
+    padding: 26px 20px 22px;
+  }
+}
+*/

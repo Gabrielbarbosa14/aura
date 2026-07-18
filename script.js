@@ -254,3 +254,103 @@ const enviarMensagem = (evento) => {
 };
 
 formAgendamento?.addEventListener("submit", enviarMensagem);
+
+/* =========================================================
+   CORREÇÃO: link recarregando a página ao clicar no card
+   Os cards de depoimento são <a href=""> apontando pra si
+   mesmos, então um clique neles recarrega a página inteira
+   (perde o estado do JS, volta pro topo, etc). Como o card
+   não navega pra lugar nenhum de verdade, só cancelamos essa
+   navegação.
+   ========================================================= */
+document.querySelectorAll(".card-list .card-link").forEach((card) => {
+  card.addEventListener("click", (evento) => evento.preventDefault());
+});
+
+/* =========================================================
+   ABAIXO: proposta de "ver depoimento completo" (COMENTADA)
+   ---------------------------------------------------------
+   Contexto: quando o comentário do cliente é grande, o texto
+   estoura a altura fixa do card e vaza visualmente. A ideia
+   era limitar o texto a 3 linhas via CSS (line-clamp) e abrir
+   um modal com o depoimento inteiro ao clicar no card ou no
+   botão "Ler mais" (colocado ao lado do nome do cliente).
+
+   Pra isso funcionar por completo, também seria necessário:
+   - Trocar cada <a href="" class="card-link"> por
+     <div class="card-link" tabindex="0" role="button" aria-haspopup="dialog">
+     (assim dá pra usar Enter/Espaço no teclado também, e não
+     depende só deste preventDefault acima)
+   - Adicionar, dentro de cada .pessoa, um
+     <button type="button" class="ver-mais-btn">Ler mais</button>
+     logo depois do <h2 class="card-title">
+   - Adicionar antes do </body> o markup do modal reaproveitável
+     (#modal-depoimento-overlay, com estrelas/texto/foto/nome)
+   - Estilos correspondentes no style2.css (também comentados lá)
+
+   Nada disso está ativo agora — é só a referência do que foi
+   implementado antes, caso você queira retomar.
+   ========================================================= */
+
+// const modalDepoimentoOverlay = document.querySelector("#modal-depoimento-overlay");
+// const modalDepoimentoEstrelas = document.querySelector("#modal-depoimento-estrelas");
+// const modalDepoimentoTexto = document.querySelector("#modal-depoimento-texto");
+// const modalDepoimentoFoto = document.querySelector("#modal-depoimento-foto");
+// const modalDepoimentoNome = document.querySelector("#modal-depoimento-nome");
+// const modalDepoimentoFechar = document.querySelector("#modal-depoimento-fechar");
+//
+// const abrirModalDepoimento = (card) => {
+//   const estrelas = card.querySelectorAll(".estrelas-avaliacao img");
+//   const texto = card.querySelector(".badge")?.textContent.trim() || "";
+//   const foto = card.querySelector(".pessoa img")?.src || "";
+//   const nome = card.querySelector(".card-title")?.textContent.trim() || "";
+//
+//   modalDepoimentoEstrelas.innerHTML = "";
+//   estrelas.forEach((estrela) => {
+//     modalDepoimentoEstrelas.appendChild(estrela.cloneNode());
+//   });
+//
+//   modalDepoimentoTexto.textContent = texto;
+//   modalDepoimentoFoto.src = foto;
+//   modalDepoimentoNome.textContent = nome;
+//
+//   modalDepoimentoOverlay.classList.add("ativo");
+//   document.body.classList.add("modal-depoimento-aberto");
+// };
+//
+// const fecharModalDepoimento = () => {
+//   modalDepoimentoOverlay.classList.remove("ativo");
+//   document.body.classList.remove("modal-depoimento-aberto");
+// };
+//
+// document.querySelectorAll(".card-list .card-link").forEach((card) => {
+//   card.addEventListener("click", (evento) => {
+//     if (evento.target.closest(".ver-mais-btn")) return;
+//     abrirModalDepoimento(card);
+//   });
+//
+//   card.addEventListener("keydown", (evento) => {
+//     if (evento.key === "Enter" || evento.key === " ") {
+//       evento.preventDefault();
+//       abrirModalDepoimento(card);
+//     }
+//   });
+// });
+//
+// document.querySelectorAll(".ver-mais-btn").forEach((botao) => {
+//   botao.addEventListener("click", (evento) => {
+//     evento.stopPropagation();
+//     abrirModalDepoimento(evento.target.closest(".card-link"));
+//   });
+// });
+//
+// modalDepoimentoFechar?.addEventListener("click", fecharModalDepoimento);
+// modalDepoimentoOverlay?.addEventListener("click", (evento) => {
+//   if (evento.target === modalDepoimentoOverlay) fecharModalDepoimento();
+// });
+//
+// window.addEventListener("keydown", (evento) => {
+//   if (evento.key === "Escape" && modalDepoimentoOverlay.classList.contains("ativo")) {
+//     fecharModalDepoimento();
+//   }
+// });

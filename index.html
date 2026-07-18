@@ -350,8 +350,7 @@
                         <img src="recursos/estrela-avaliação.png" alt="" class="card-image" loading="lazy" />
                       </div>
                       <p class="badge">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Impedit"
+                        "Atendimento impecável e resultado surpreendente nas lentes. Me sinto outra pessoa!"
                       </p>
                     </div>
                     <div class="pessoa">
@@ -371,8 +370,7 @@
                         <img src="recursos/estrela-avaliação.png" alt="" class="card-image" loading="lazy" />
                       </div>
                       <p class="badge">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Impedit"
+                        "Profissionais extremamente atenciosos. A clínica é linda e tudo muito limpo."
                       </p>
                     </div>
                     <div class="pessoa">
@@ -392,8 +390,7 @@
                         <img src="recursos/estrela-avaliação.png" alt="" class="card-image" loading="lazy" />
                       </div>
                       <p class="badge">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Impedit"
+                        "Fiz implante aqui na última semana, processo tranquilo e sem dor. Recomendo demais."
                       </p>
                     </div>
                     <div class="pessoa">
@@ -413,8 +410,7 @@
                         <img src="recursos/estrela-avaliação.png" alt="" class="card-image" loading="lazy" />
                       </div>
                       <p class="badge">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Impedit"
+                        "Melhor clareamento que já fiz. Resultado natural e duradouro. Super recomendo!"
                       </p>
                     </div>
                     <div class="pessoa">
@@ -434,8 +430,7 @@
                         <img src="recursos/estrela-avaliação.png" alt="" class="card-image" loading="lazy" />
                       </div>
                       <p class="badge">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Impedit"
+                        "Profissionais competentes e serviço de excelência. Virou minha clínica de confiança."
                       </p>
                     </div>
                     <div class="pessoa">
@@ -455,8 +450,7 @@
                         <img src="recursos/estrela-avaliação.png" alt="" class="card-image" loading="lazy" />
                       </div>
                       <p class="badge">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Impedit"
+                        "Paciência e carinho incríveis com as crianças. Perfeito para atender a família toda!"
                       </p>
                     </div>
                     <div class="pessoa">
@@ -701,5 +695,46 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
+
+    <!--
+      ABAIXO: proposta de "ver depoimento completo" (COMENTADA)
+      ---------------------------------------------------------
+      Nada aqui está ativo, é só a referência do que foi implementado
+      antes pra resolver o comentário grande vazando do card.
+
+      1) Cada <a href="" class="card-link"> (seção #depoimentos) viraria:
+
+         <div class="card-link" tabindex="0" role="button" aria-haspopup="dialog">
+
+      2) Dentro de cada .pessoa, logo depois do <h2 class="card-title">,
+         entraria um botão:
+
+         <button type="button" class="ver-mais-btn">Ler mais</button>
+
+      3) E este modal reaproveitável (uma cópia só, preenchida via JS
+         com o conteúdo do card clicado) entraria aqui embaixo:
+
+      <div id="modal-depoimento-overlay">
+        <div
+          id="modal-depoimento"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-depoimento-nome"
+        >
+          <button type="button" id="modal-depoimento-fechar" aria-label="Fechar">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div id="modal-depoimento-estrelas"></div>
+          <p id="modal-depoimento-texto"></p>
+          <div id="modal-depoimento-pessoa">
+            <img id="modal-depoimento-foto" src="" alt="" />
+            <h2 id="modal-depoimento-nome"></h2>
+          </div>
+        </div>
+      </div>
+
+      Os estilos e o JS correspondentes também estão comentados
+      no style2.css e no script.js.
+    -->
   </body>
 </html>
